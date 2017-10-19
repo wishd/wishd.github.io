@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[机器学习]]></title>
+      <url>/2017/10/19/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</div><div class="line">监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</div><div class="line">训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</div></pre></td></tr></table></figure>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</div></pre></td></tr></table></figure>
+<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">介于监督学习与无监督学习之间</div></pre></td></tr></table></figure>
+<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</div></pre></td></tr></table></figure>
+<h1 id="机器学习知识储备"><a href="#机器学习知识储备" class="headerlink" title="机器学习知识储备"></a>机器学习知识储备</h1><p>从数学层面推导最经典的机器学习算法，以及每种算法的示例和代码实现（Python）、如何做算法的参数调试、以实际应用案例分析各种算法的选择等。</p>
+<h2 id="机器学习的数学基础1-数学分析"><a href="#机器学习的数学基础1-数学分析" class="headerlink" title="机器学习的数学基础1 - 数学分析"></a>机器学习的数学基础1 - 数学分析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">机器学习的一般方法和横向比较</div><div class="line">数学是有用的：以SVD为例</div><div class="line">机器学习的角度看数学</div><div class="line">复习数学分析</div><div class="line">直观解释常数e</div><div class="line">导数/梯度</div><div class="line">随机梯度下降</div><div class="line">Taylor展式的落地应用</div><div class="line">gini系数</div><div class="line">凸函数</div><div class="line">Jensen不等式</div><div class="line">组合数与信息熵的关系</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础2-概率论与贝叶斯先验"><a href="#机器学习的数学基础2-概率论与贝叶斯先验" class="headerlink" title="机器学习的数学基础2 - 概率论与贝叶斯先验"></a>机器学习的数学基础2 - 概率论与贝叶斯先验</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">概率论基础</div><div class="line">古典概型</div><div class="line">贝叶斯公式</div><div class="line">先验分布/后验分布/共轭分布</div><div class="line">常见概率分布</div><div class="line">泊松分布和指数分布的物理意义</div><div class="line">协方差(矩阵)和相关系数</div><div class="line">独立和不相关</div><div class="line">大数定律和中心极限定理的实践意义</div><div class="line">深刻理解最大似然估计MLE和最大后验估计MAP</div><div class="line">过拟合的数学原理与解决方案</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础3-矩阵和线性代数"><a href="#机器学习的数学基础3-矩阵和线性代数" class="headerlink" title="机器学习的数学基础3 - 矩阵和线性代数"></a>机器学习的数学基础3 - 矩阵和线性代数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">线性代数在数学科学中的地位</div><div class="line">马尔科夫模型</div><div class="line">矩阵乘法的直观表达</div><div class="line">状态转移矩阵</div><div class="line">矩阵和向量组</div><div class="line">特征向量的思考和实践计算</div><div class="line">QR分解</div><div class="line">对称阵、正交阵、正定阵</div><div class="line">数据白化及其应用</div><div class="line">向量对向量求导</div><div class="line">标量对向量求导</div><div class="line">标量对矩阵求导</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础4-数理统计与参数估计"><a href="#机器学习的数学基础4-数理统计与参数估计" class="headerlink" title="机器学习的数学基础4 - 数理统计与参数估计"></a>机器学习的数学基础4 - 数理统计与参数估计</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">统计量</div><div class="line">期望/方差/偏度/峰度</div><div class="line">中心矩/原点矩</div><div class="line">矩估计</div><div class="line">深刻理解最大似然估计</div><div class="line">过拟合的数学原理与解决方案</div><div class="line">最大后验估计MAP</div><div class="line">偏差方差二难</div></pre></td></tr></table></figure>
+<h2 id="Python基础1-Python及其数学库"><a href="#Python基础1-Python及其数学库" class="headerlink" title="Python基础1 - Python及其数学库"></a>Python基础1 - Python及其数学库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">解释器Python2.7与IDE：Anaconda/Pycharm</div><div class="line">Python基础：列表/元组/字典/类/文件</div><div class="line">Taylor展式的代码实现</div><div class="line">numpy/scipy/matplotlib/panda的介绍和典型使用</div><div class="line">多元高斯分布</div><div class="line">泊松分布、幂律分布</div><div class="line">典型图像处理</div></pre></td></tr></table></figure>
+<h2 id="Python基础2-机器学习库"><a href="#Python基础2-机器学习库" class="headerlink" title="Python基础2 - 机器学习库"></a>Python基础2 - 机器学习库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">scikit-learn的介绍和典型使用</div><div class="line">损失函数的绘制</div><div class="line">多种数学曲线</div><div class="line">多项式拟合</div><div class="line">快速傅里叶变换FFT</div><div class="line">奇异值分解SVD</div><div class="line">Soble/Prewitt/Laplacian算子与卷积网络</div><div class="line">卷积与(指数)移动平均线</div><div class="line">股票数据分析</div></pre></td></tr></table></figure>
+<h2 id="Python基础3-数据清洗和特征选择"><a href="#Python基础3-数据清洗和特征选择" class="headerlink" title="Python基础3 - 数据清洗和特征选择"></a>Python基础3 - 数据清洗和特征选择</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">实际生产问题中算法和特征的关系</div><div class="line">股票数据的特征提取和应用</div><div class="line">一致性检验</div><div class="line">缺失数据的处理</div><div class="line">环境数据异常检测和分析</div><div class="line">模糊数据查询和数据校正方法、算法、应用</div></pre></td></tr></table></figure>
+<h2 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">线性回归</div><div class="line">Logistic/Softmax回归</div><div class="line">广义线性回归</div><div class="line">L1/L2正则化</div><div class="line">Ridge与LASSO</div><div class="line">Elastic Net</div><div class="line">梯度下降算法：BGD与SGD</div><div class="line">特征选择与过拟合</div><div class="line">Softmax回归的概念源头</div><div class="line">最大熵模型</div><div class="line">K-L散度</div></pre></td></tr></table></figure>
+<h2 id="回归实践"><a href="#回归实践" class="headerlink" title="回归实践"></a>回归实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">机器学习sklearn库介绍</div><div class="line">回归代码实现和调参</div><div class="line">Ridge回归/LASSO/Elastic Net</div><div class="line">Logistic/Softmax回归</div><div class="line">广告投入与销售额回归分析</div><div class="line">鸢尾花数据集的分类</div><div class="line">回归代码实现和调参</div><div class="line">交叉验证</div><div class="line">数据可视化</div></pre></td></tr></table></figure>
+<h2 id="决策树和随机森林"><a href="#决策树和随机森林" class="headerlink" title="决策树和随机森林"></a>决策树和随机森林</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">熵、联合熵、条件熵、KL散度、互信息</div><div class="line">最大似然估计与最大熵模型</div><div class="line">ID3、C4.5、CART详解</div><div class="line">决策树的正则化</div><div class="line">预剪枝和后剪枝</div><div class="line">Bagging</div><div class="line">随机森林</div><div class="line">不平衡数据集的处理</div><div class="line">利用随机森林做特征选择</div><div class="line">使用随机森林计算样本相似度</div></pre></td></tr></table></figure>
+<h2 id="随机森林实践"><a href="#随机森林实践" class="headerlink" title="随机森林实践"></a>随机森林实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">随机森林与特征选择</div><div class="line">决策树应用于回归</div><div class="line">多标记的决策树回归</div><div class="line">决策树和随机森林的可视化</div><div class="line">葡萄酒数据集的决策树/随机森林分类</div></pre></td></tr></table></figure>
+<h2 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">提升为什么有效</div><div class="line">Adaboost算法</div><div class="line">加法模型与指数损失</div><div class="line">梯度提升决策树GBDT</div><div class="line">XGBoost算法详解</div></pre></td></tr></table></figure>
+<h2 id="XGBoost实践"><a href="#XGBoost实践" class="headerlink" title="XGBoost实践"></a>XGBoost实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">自己动手实现GBDT</div><div class="line">XGBoost库介绍</div><div class="line">Taylor展式与学习算法</div><div class="line">KAGGLE简介</div><div class="line">泰坦尼克乘客存活率估计</div></pre></td></tr></table></figure>
+<h2 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">线性可分支持向量机</div><div class="line">软间隔的改进</div><div class="line">损失函数的理解</div><div class="line">核函数的原理和选择</div><div class="line">SMO算法</div><div class="line">支持向量回归SVR</div></pre></td></tr></table></figure>
+<h2 id="SVM实践"><a href="#SVM实践" class="headerlink" title="SVM实践"></a>SVM实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">libSVM代码库介绍</div><div class="line">原始数据和特征提取</div><div class="line">调用开源库函数完成SVM</div><div class="line">葡萄酒数据分类</div><div class="line">数字图像的手写体识别</div><div class="line">SVR用于时间序列曲线预测</div><div class="line">SVM、Logistic回归、随机森林三者的横向比较</div></pre></td></tr></table></figure>
+<h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">各种相似度度量及其相互关系</div><div class="line">Jaccard相似度和准确率、召回率</div><div class="line">Pearson相关系数与余弦相似度</div><div class="line">K-means与K-Medoids及变种</div><div class="line">AP算法(Sci07)/LPA算法及其应用</div><div class="line">密度聚类DBSCAN/DensityPeak(Sci14)</div><div class="line">谱聚类SC</div><div class="line">聚类评价和结果指标</div></pre></td></tr></table></figure>
+<h2 id="聚类实践"><a href="#聚类实践" class="headerlink" title="聚类实践"></a>聚类实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">K-Means++算法原理和实现</div><div class="line">向量量化VQ及图像近似</div><div class="line">并查集的实践应用</div><div class="line">密度聚类的代码实现</div><div class="line">谱聚类用于图片分割</div></pre></td></tr></table></figure>
+<h2 id="EM算法"><a href="#EM算法" class="headerlink" title="EM算法"></a>EM算法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">最大似然估计</div><div class="line">Jensen不等式</div><div class="line">朴素理解EM算法</div><div class="line">精确推导EM算法</div><div class="line">EM算法的深入理解</div><div class="line">混合高斯分布</div><div class="line">主题模型pLSA</div></pre></td></tr></table></figure>
+<h2 id="EM算法实践"><a href="#EM算法实践" class="headerlink" title="EM算法实践"></a>EM算法实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">多元高斯分布的EM实现</div><div class="line">分类结果的数据可视化</div><div class="line">EM与聚类的比较</div><div class="line">Dirichlet过程EM</div><div class="line">三维及等高线等图件的绘制</div><div class="line">主题模型pLSA与EM算法</div></pre></td></tr></table></figure>
+<h2 id="贝叶斯网络"><a href="#贝叶斯网络" class="headerlink" title="贝叶斯网络"></a>贝叶斯网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">朴素贝叶斯</div><div class="line">贝叶斯网络的表达</div><div class="line">条件概率表参数个数分析</div><div class="line">马尔科夫模型</div><div class="line">D-separation</div><div class="line">条件独立的三种类型</div><div class="line">Markov Blanket</div><div class="line">混合(离散+连续)网络：线性高斯模型</div><div class="line">Chow-Liu算法：最大权生成树MSWT</div></pre></td></tr></table></figure>
+<h2 id="朴素贝叶斯实践"><a href="#朴素贝叶斯实践" class="headerlink" title="朴素贝叶斯实践"></a>朴素贝叶斯实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> GaussianNB</div><div class="line">MultinomialNB</div><div class="line">BernoulliNB</div><div class="line">朴素贝叶斯用于鸢尾花数据</div><div class="line">朴素贝叶斯用于18000+篇新闻文本的分类</div></pre></td></tr></table></figure>
+<h2 id="主题模型LDA"><a href="#主题模型LDA" class="headerlink" title="主题模型LDA"></a>主题模型LDA</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">贝叶斯学派的模型认识</div><div class="line">共轭先验分布</div><div class="line">Dirichlet分布</div><div class="line">Laplace平滑</div><div class="line">Gibbs采样详解</div></pre></td></tr></table></figure>
+<h2 id="LDA实践"><a href="#LDA实践" class="headerlink" title="LDA实践"></a>LDA实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">网络爬虫的原理和代码实现</div><div class="line">停止词和高频词</div><div class="line">动手自己实现LDA</div><div class="line">LDA开源包的使用和过程分析</div><div class="line">Metropolis-Hastings算法</div><div class="line">MCMC</div><div class="line">LDA与word2vec的比较</div></pre></td></tr></table></figure>
+<h2 id="隐马尔科夫模型HMM"><a href="#隐马尔科夫模型HMM" class="headerlink" title="隐马尔科夫模型HMM"></a>隐马尔科夫模型HMM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">概率计算问题</div><div class="line">前向/后向算法</div><div class="line">HMM的参数学习</div><div class="line">Baum-Welch算法详解</div><div class="line">Viterbi算法详解</div><div class="line">隐马尔科夫模型的应用优劣比较</div></pre></td></tr></table></figure>
+<h2 id="HMM实践"><a href="#HMM实践" class="headerlink" title="HMM实践"></a>HMM实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">动手自己实现HMM用于中文分词</div><div class="line">多个语言分词开源包的使用和过程分析</div><div class="line">文件数据格式UFT-8、Unicode</div><div class="line">停止词和标点符号对分词的影响</div><div class="line">前向后向算法计算概率溢出的解决方案</div><div class="line">发现新词和分词效果分析</div><div class="line">高斯混合模型HMM</div><div class="line">GMM-HMM用于股票数据特征提取</div></pre></td></tr></table></figure>
+<h1 id="具体的机器学习算法"><a href="#具体的机器学习算法" class="headerlink" title="具体的机器学习算法"></a>具体的机器学习算法</h1><h2 id="构造间隔理论分布：聚类分析和模式识别"><a href="#构造间隔理论分布：聚类分析和模式识别" class="headerlink" title="构造间隔理论分布：聚类分析和模式识别"></a>构造间隔理论分布：聚类分析和模式识别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">人工神经网络</div><div class="line">决策树</div><div class="line">感知器</div><div class="line">支持向量机</div><div class="line">集成学习AdaBoost</div><div class="line">降维与度量学习</div><div class="line">聚类</div><div class="line">贝叶斯分类器</div></pre></td></tr></table></figure>
+<h2 id="构造条件概率：回归分析和统计分类"><a href="#构造条件概率：回归分析和统计分类" class="headerlink" title="构造条件概率：回归分析和统计分类"></a>构造条件概率：回归分析和统计分类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">高斯过程回归</div><div class="line">线性判别分析</div><div class="line">最近邻居法</div><div class="line">径向基函数核</div></pre></td></tr></table></figure>
+<h2 id="通过再生模型构造概率密度函数"><a href="#通过再生模型构造概率密度函数" class="headerlink" title="通过再生模型构造概率密度函数"></a>通过再生模型构造概率密度函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">最大期望算法</div><div class="line">概率图模型：包括贝叶斯网和Markov随机场</div><div class="line">Generative Topographic Mapping</div></pre></td></tr></table></figure>
+<h2 id="近似推断技术"><a href="#近似推断技术" class="headerlink" title="近似推断技术"></a>近似推断技术</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">马尔可夫链</div><div class="line">蒙特卡罗方法</div><div class="line">变分法</div></pre></td></tr></table></figure>
+<h2 id="最优化"><a href="#最优化" class="headerlink" title="最优化"></a>最优化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">大多数以上方法，直接或者间接使用最优化算法</div></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Machine learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Debian Linux]]></title>
+      <url>/2017/10/19/debian-1/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<h2 id="Linux基本命令"><a href="#Linux基本命令" class="headerlink" title="Linux基本命令"></a>Linux基本命令</h2><h3 id="Linux运行级别"><a href="#Linux运行级别" class="headerlink" title="Linux运行级别"></a>Linux运行级别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">init 0：halt</div><div class="line">init 1：单用户</div><div class="line">init 2～5：多用户</div><div class="line">init 6：reboot</div></pre></td></tr></table></figure>
+<h3 id="用户登录与退出登录"><a href="#用户登录与退出登录" class="headerlink" title="用户登录与退出登录"></a>用户登录与退出登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ 普通用户</div><div class="line"><span class="comment"># root用户</span></div></pre></td></tr></table></figure>
+<h3 id="Bash操作"><a href="#Bash操作" class="headerlink" title="Bash操作"></a>Bash操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">命令历史</div><div class="line"><span class="built_in">history</span></div><div class="line">！：命令键入历史相关联字符</div><div class="line">！！：键入上一事件</div><div class="line">别名：<span class="built_in">alias</span></div></pre></td></tr></table></figure>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span></div><div class="line">Ctrl + D</div></pre></td></tr></table></figure>
+<h3 id="修改口令"><a href="#修改口令" class="headerlink" title="修改口令"></a>修改口令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure>
+<h3 id="开启虚拟控制台tty"><a href="#开启虚拟控制台tty" class="headerlink" title="开启虚拟控制台tty"></a>开启虚拟控制台tty</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ctrl+F1～F6</div></pre></td></tr></table></figure>
+<h3 id="常用系统命令"><a href="#常用系统命令" class="headerlink" title="常用系统命令"></a>常用系统命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">删除行首到光标间内容：Ctrl + U</div><div class="line">屏幕显示文件内容:  cat files</div><div class="line">复制文件和目录:  cp file1 file2</div><div class="line">显示文件内容:  less files</div><div class="line">移动，重命名文件:  mv file1 file2</div><div class="line">删除文件名:  rm files</div><div class="line">删除空目录:  rmdir</div><div class="line">查找文件:  find files</div><div class="line">在文件中搜索匹配字符串:  grep search-string files</div><div class="line">将命令输出添加到文件尾部:  <span class="built_in">command</span> &gt;&gt; file</div></pre></td></tr></table></figure>
+<h3 id="系统关闭"><a href="#系统关闭" class="headerlink" title="系统关闭"></a>系统关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">多用户下：shutdown -h now</div><div class="line">单用户下：poweroff -i -f         halt</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">shell种类：bash   csh    zsh   fish</div><div class="line">shell时间命令：date   cal</div></pre></td></tr></table></figure>
+<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* ? [ ]</div><div class="line">反引号：` shell解释为命令行，优先执行，并将结果替代反引号内容，例如 ls `<span class="built_in">pwd</span>` 则列举当前目录文件</div><div class="line">注释符：<span class="comment">#</span></div></pre></td></tr></table></figure>
+<h3 id="管道字符"><a href="#管道字符" class="headerlink" title="管道字符"></a>管道字符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">： |  &gt;  &lt;&lt;  &gt;&gt;</div></pre></td></tr></table></figure>
+<h3 id="标准输入输出"><a href="#标准输入输出" class="headerlink" title="标准输入输出"></a>标准输入输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wc：统计指定文件包含行数，单词数，字符数。</div></pre></td></tr></table></figure>
+<h3 id="显示文件内容"><a href="#显示文件内容" class="headerlink" title="显示文件内容"></a>显示文件内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat （也可将两个文件连接在一起）</div><div class="line">文本：    more        less</div><div class="line">head [ -n ] ：指定文件前n行内容</div><div class="line">tail [ -n ]：显示文件后n行内容</div><div class="line">od：指定以不同进制显示文件</div><div class="line">d：十进制    o：八进制    x：十六进制</div><div class="line">c：ASCII字符    f：浮点数    u：无符号十进制</div><div class="line">ln：文件链接命令</div><div class="line">ln [ 选项 ] 目标 [ 链接名 ]    ln [ 选项 ]  目标 目录</div></pre></td></tr></table></figure>
+<h3 id="改变访问权限命令"><a href="#改变访问权限命令" class="headerlink" title="改变访问权限命令"></a>改变访问权限命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod </div><div class="line">r：可读    w：可写    x：可执行</div><div class="line">0：无权限   1：可执行   2：可写    4：可读    6：可读可写   7：可读可写可执行</div></pre></td></tr></table></figure>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">目录创建和删除命令：mkdir    rmdir</div><div class="line">改变工作目录：<span class="built_in">cd</span></div><div class="line">当前工作路径：<span class="built_in">pwd</span></div><div class="line">列出当前工作目录文件：ls</div><div class="line">复制删除移动：cp    rm    mv</div><div class="line">文件统计命令：wc    comm （有序文件比较）   diff （逐行比较两个文本文件）</div><div class="line">修改文件存取时间或者创建空文件：touch</div><div class="line">装载目录    mount  /dev/sda1：装载sda1分区</div><div class="line">卸载目录    umount  /dev/sda1：卸载sda1分区</div></pre></td></tr></table></figure>
+<h3 id="文件内容查询命令"><a href="#文件内容查询命令" class="headerlink" title="文件内容查询命令"></a>文件内容查询命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">语法  grep [ 选项 ] [ 查找模式 ] [ 文件名 ]</div><div class="line">grep （一次搜索一个指定模式） </div><div class="line">fgrep  （检索固定字符串） </div><div class="line">egrep （检索扩展的正则表达式）</div><div class="line">find（目录结构中搜索文件，并执行指定操作） </div><div class="line">locate（查找文件，速度比find快）</div><div class="line">sed：非交互性文本流编辑器，可从文件和字符串抽取所需信息</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">调用的3种格式：</div><div class="line">命令行方式：sed [ 选项 ]  sed命令 输入文件</div><div class="line">sed脚本文件：包含sed命令脚本文件  [ 选项 ] 输入文件</div><div class="line">sed调用脚本文件：sed [ 选项 ]  -f 不包含sed命令的脚本文件  输入文件</div><div class="line">sed选项</div><div class="line">-n：不打印    -c：下条命令是编辑命令    -f：调用sed脚本文件</div><div class="line">sed 定位文本方式（行号，正则）</div><div class="line">awk：编程语言，对文本和数据进行处理，支持正则，特点是对文本列的</div><div class="line">操作，基本功能是在文件或字符串中基于指定规则来分解抽取信息，或输出信息</div></pre></td></tr></table></figure>
+<h3 id="文本处理命令"><a href="#文本处理命令" class="headerlink" title="文本处理命令"></a>文本处理命令</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sort（对文件中各行进行排序）</div><div class="line">uniq（读取输入文件，并比较相邻行，删除重复行）</div></pre></td></tr></table></figure>
+<h3 id="基本系统维护命令"><a href="#基本系统维护命令" class="headerlink" title="基本系统维护命令"></a>基本系统维护命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">wall（对全部已经登录用户发送信息）</div><div class="line">write（向系统中某一个用户发送信息）</div><div class="line">mesg（设定是否允许其他用户用write给自己发信息）</div><div class="line">sync（强制将内存中数据写回硬盘，避免信息丢失）</div><div class="line">free（查看内存使用情况）</div><div class="line">uptime（显示系统已经运行了多长时间）</div><div class="line">clear（清屏）等效于 Ctrl+L</div></pre></td></tr></table></figure>
+<h3 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim</div><div class="line">emacs</div><div class="line">nano</div><div class="line">gedit</div></pre></td></tr></table></figure>
+<h2 id="Linux系统管理"><a href="#Linux系统管理" class="headerlink" title="Linux系统管理"></a>Linux系统管理</h2><h3 id="用户与组管理"><a href="#用户与组管理" class="headerlink" title="用户与组管理"></a>用户与组管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">用户管理</div><div class="line">useradd （添加用户）</div><div class="line">passwd（设定用户口令）</div><div class="line">usermod（修改用户）</div><div class="line">userdel -r （删除用户）</div><div class="line">组管理</div><div class="line">groupadd（添加组）</div><div class="line">groupmod（修改组）</div><div class="line">groupdel（删除组）</div></pre></td></tr></table></figure>
+<h3 id="相关配置信息"><a href="#相关配置信息" class="headerlink" title="相关配置信息"></a>相关配置信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/etc/passwd文件（保留每个用户帐号多种信息）</div><div class="line">/etc/shadow文件（将加密后口令分离出来存放位置，由pwconv根据/etc/passwd数据自动产生）</div><div class="line">/etc/group文件（分组将多个用户分一起，方便用户权限管理）</div><div class="line">/etc/gshadow（指定相应组加密口令和特定组管理员权限）</div><div class="line">/etc/skel（存放默认一组shell配置文件，也可将每个用户都需要的文件放在该目录下，so每个用户主目录都有此文件拷贝）</div><div class="line">/etc/login.defs（生成新用户时配置信息文件，包含电子邮件目录，口令过期时间，用户ID，组ID等）</div></pre></td></tr></table></figure>
+<h3 id="文件属主和权限"><a href="#文件属主和权限" class="headerlink" title="文件属主和权限"></a>文件属主和权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">d               rwx             r-x            r-x</div><div class="line">文件类型       所有者权限          组权限         其他用户权限</div></pre></td></tr></table></figure>
+<h3 id="分区管理"><a href="#分区管理" class="headerlink" title="分区管理"></a>分区管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fdisk（专家级别分区工具）</div><div class="line">cfdisk</div><div class="line">mkfs（格式化成linux分区）</div><div class="line">mkfs -t ext4 /dev/sda1（将/dev/sda1分区格式化为ext4文件系统）</div><div class="line">maswap（格式化成swap分区）</div></pre></td></tr></table></figure>
+<h3 id="proc文件系统"><a href="#proc文件系统" class="headerlink" title="proc文件系统"></a>proc文件系统</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">进程信息</div><div class="line">/proc目录下有进程号PID命名的子目录，是读取进程信息的接口</div><div class="line">高级电源管理APM信息</div><div class="line">/proc/apm</div><div class="line">CPU信息</div><div class="line">/proc/cpuinfo</div><div class="line">负载信息</div><div class="line">/proc/loadavg包含负载信息，3个0～1变化的数字衡量，分别为最高利用率，平均利用率，最低利用率</div><div class="line">系统内存信息</div><div class="line">/proc/meminfo包含系统内存详细信息，显示物理内存的数量，可用交换空间数量等</div></pre></td></tr></table></figure>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">查看进程</div><div class="line">ps</div><div class="line">top</div><div class="line">pstree</div><div class="line">启动进程</div><div class="line">手工启动    gedit &amp;    ：&amp;表示直接放在后台运行程序</div><div class="line">结束进程</div><div class="line"><span class="built_in">kill</span> PID</div></pre></td></tr></table></figure>
+<h3 id="内核模块"><a href="#内核模块" class="headerlink" title="内核模块"></a>内核模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">modprode -c：显示正在被使用的模块配置</div><div class="line">modprode -r [modname]：移除模块</div><div class="line">lsmod：列出已经加载的模块 </div><div class="line">modinfo [modname]：显示模块信息</div></pre></td></tr></table></figure>
+<h3 id="系统日志管理"><a href="#系统日志管理" class="headerlink" title="系统日志管理"></a>系统日志管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">3种主要的日志子系统</div><div class="line">连接时间日志，写入到/var/<span class="built_in">log</span>/wtmp和/var/run/utmp，使系统管理员能够跟踪谁何时登录系统</div><div class="line">进程统计日志，由内核执行，当进程终止时，该进程在进程统计文件写一个记录，目的是为系统基本服务提供命令使用统计</div><div class="line">错误日志，由syslogd执行，各种系统守护进程、用户进程和内核通过syslog向文件/var/<span class="built_in">log</span>/messages报告值得注意的事件</div><div class="line"></div><div class="line">常用日志文件</div><div class="line">/var/<span class="built_in">log</span>/messages：记录与硬件和服务相关联的各种信息</div><div class="line">/var/<span class="built_in">log</span>/dmsg：保存内核启动信息</div><div class="line">登录日志：记录用户登录和退出时间</div><div class="line">其他服务日志：/var/<span class="built_in">log</span>/  例如apache等服务日志</div><div class="line"></div><div class="line">syslogd（日志记录系统活动的守护进程，实现对日志统一、集中控制结构）</div><div class="line">logrotate（管理系统日志备份工作，是一个集中管理工具，可用作查看并且备份日志文件，并创建新的日志文件，配置文件为/etc/logrotate.conf）</div></pre></td></tr></table></figure>
+<h3 id="查询依赖库"><a href="#查询依赖库" class="headerlink" title="查询依赖库"></a>查询依赖库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ldd</div></pre></td></tr></table></figure>
+<h3 id="Linux网络设置"><a href="#Linux网络设置" class="headerlink" title="Linux网络设置"></a>Linux网络设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ip（显示当前主机激活的网络接口信息）</div><div class="line">ifconfig（显示当前主机激活的网络接口信息）</div><div class="line">route（显示当前系统路由信息）</div><div class="line">netstat（显示Linux系统路由信息（路由表））</div><div class="line">nslookup（查询和交互两种方式）</div><div class="line">ping（测试当前主机到网络其他主机网络连接是否正常）</div><div class="line">DHCP（配置动态获取IP地址）</div><div class="line">DNS（设置DNS服务器地址）</div><div class="line">nslookup（DNS服务器查询）</div><div class="line">dig（DNS服务器查询）</div><div class="line">host（DNS服务器查询）</div></pre></td></tr></table></figure>
+<h3 id="安装Apache服务器"><a href="#安装Apache服务器" class="headerlink" title="安装Apache服务器"></a>安装Apache服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">apt安装apache2服务器</div><div class="line">apt-get install apache2</div><div class="line">ps aux | grep apache2（查看apache2相关进程）</div><div class="line"></div><div class="line">从源码安装apache2服务器：</div><div class="line">1、获取源代码：Apache网站上获取apache2源代码</div><div class="line">2、将源代码解压缩：tar -zxvf apache-version</div><div class="line">3、进入源代码树目录：<span class="built_in">cd</span> apache-version</div><div class="line">4、配置源代码： 直接执行./configure --prefix=PREFIX（PREFIX用路径代替，例如/usr/<span class="built_in">local</span>/apache）</div><div class="line">5、生成Apache：make</div><div class="line">6、安装服务器：make install</div><div class="line"></div><div class="line">配置web服务器</div><div class="line">apache服务的配置文件</div><div class="line">全局配置指令</div><div class="line">配置默认服务器</div><div class="line">配置虚拟服务器</div><div class="line"></div><div class="line">web服务器的启动和停止</div><div class="line">/etc/init.d/apache2 start    ： 启动apache2服务器</div><div class="line">/etc/init.d/apache2 restart ： 重新启动apache2服务器，通常修改配置文件后使用</div><div class="line">/etc/init.d/apache2 stop    ： 停止apache2服务器进程</div><div class="line">inetd与xinetd</div><div class="line"></div><div class="line">超级守护进程：inetd 统一为许多daemon提供监听服务</div><div class="line">扩展的超级守护进程xinetd，功能更强，配置较复杂</div><div class="line">使用inetd启动apache服务器，首先查看/etc/services文件80端口是否由对应服务，然后在inetd配置文件/etc/inetd.conf中添加指令</div><div class="line">让inetd监听客户端对apache的连接请求，最后停止daemon形式运行的apache服务器，后修改其配置文件/etc/apche/httpd.conf，注释掉之前的standalone启动方式，改为inetd方式。</div></pre></td></tr></table></figure>
+<h2 id="Debian基本命令"><a href="#Debian基本命令" class="headerlink" title="Debian基本命令"></a>Debian基本命令</h2><h3 id="系统基本设置"><a href="#系统基本设置" class="headerlink" title="系统基本设置"></a>系统基本设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">debconf（Deb配置命令）</div><div class="line"><span class="built_in">fc</span>-cache -f -v（更新字体信息缓存）</div></pre></td></tr></table></figure>
+<h3 id="系统配置工具"><a href="#系统配置工具" class="headerlink" title="系统配置工具"></a>系统配置工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/etc/hostname（配置主机名）</div><div class="line">/etc/network/interfaces（网络配置）</div></pre></td></tr></table></figure>
+<h3 id="apt管理软件包"><a href="#apt管理软件包" class="headerlink" title="apt管理软件包"></a>apt管理软件包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">设置APT源（/etc/apt/sources.list）</div><div class="line">apt-get update（升级）</div><div class="line">apt-get upgrade（更新）</div><div class="line">apt-cache stats（显示系统所使用数据源统计信息）</div><div class="line">apt-cache search（按关键词查找相关软件包）</div><div class="line">apt-cache depends（查询指定软件包依赖，冲突，替代软件包信息）</div><div class="line">apt-cache rdepend（查询指定软件包反向依赖信息）</div><div class="line">apt-get install（安装指定软件包）</div><div class="line">apt-get --reinstall install（重新安装指定软件包）</div><div class="line">apt-get remove（不完全卸载指定软件包，保留配置信息）</div><div class="line">apt-get --purge remove（完全卸载，不保留配置）</div><div class="line">apt-get clean（清除在apt-get下载安装软件包时在/var/cache/apt/archives目录中的缓存deb包）</div><div class="line">apt-get check：更新缓冲区并检查损坏的软件包</div><div class="line">apt-cache show -a package：显示dists中软件包描述信息</div><div class="line">apt-cache showsrc package：显示源码包的信息</div><div class="line">apt-cache showrc（查看源码包信息）</div><div class="line">apt-get <span class="built_in">source</span>（下载指定软件的源码包到当前目录）</div><div class="line">apt-get build-deb（为指定源码包构建编译环境）</div></pre></td></tr></table></figure>
+<h3 id="建立本地APT代理服务"><a href="#建立本地APT代理服务" class="headerlink" title="建立本地APT代理服务"></a>建立本地APT代理服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">安装apt-proxy服务器（apt-get install apt-proxy）</div><div class="line">配置apt-proxy服务器（/etc/apt-proxy/apt-proxy-v2.conf）</div><div class="line">使用apt-proxy服务器作为软件库源</div></pre></td></tr></table></figure>
+<h3 id="dpkg包管理"><a href="#dpkg包管理" class="headerlink" title="dpkg包管理"></a>dpkg包管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">dpkg --audit | C（搜索未完成安装的软件包）</div><div class="line">dpkg -l（查询系统已经安装deb包信息）</div><div class="line">dpkg -s（查询指定软件包详细信息）</div><div class="line">dpkg -L（查询系统已经安装软件包所安装的文件）</div><div class="line">dpkg -S（查询系统某文件属于哪个软件包）</div><div class="line">dpkg -c（查询deb包文件所包含的文件） </div><div class="line">dpkg -i（安装deb软件包）</div><div class="line">dpkg -r（不完全卸载软件包，但保留配置信息）</div><div class="line">dpkg -P（完全卸载软件包，同时删除配置信息）</div></pre></td></tr></table></figure>
+<h3 id="Debian高级包管理工具"><a href="#Debian高级包管理工具" class="headerlink" title="Debian高级包管理工具"></a>Debian高级包管理工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tasksel（安装系统过程调用执行的工具，可用来选择需要安装或卸载的软件组件）</div><div class="line">dselect（难度高的deb管理工具）</div><div class="line">aptitude（操作简单，安装与解决依赖库问题）</div><div class="line">synaptic（新立德，apt图形包管理工具）</div></pre></td></tr></table></figure>
+<h2 id="不能运行命令"><a href="#不能运行命令" class="headerlink" title="不能运行命令"></a>不能运行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf / （删除根分区全部的文件）</div><div class="line">sudo rm -rf . （删除当前目录下的所有文件）</div><div class="line">sudo rm -rf * （同上）</div><div class="line">rm -rf * or rm -rf *.* （同上）</div><div class="line">rm -rf ~ / &amp; （删除根分区和home目录，即使你不是root，home目录还是不能幸免）</div><div class="line">sudo mkfs.xxxx（擦除硬盘分区，xxxx 可以是 vfat、ext2、ext3、bfs）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/zero of=/dev/sda （全部硬盘清零）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/sda of=/dev/sdb （用第一块硬盘的内容覆盖第二块的内容）</div><div class="line">sudo dd <span class="keyword">if</span>=something of=/dev/sda （往硬盘上写垃圾数据）</div><div class="line">any_command &gt; /dev/sda （用随意的数据破坏硬盘）</div><div class="line">:()&#123;:|:&amp;&#125;;:（fork炸弹）</div><div class="line">fork <span class="keyword">while</span> fork（同上）</div><div class="line">python -c <span class="string">'import os; os.system("".join([chr(ord(i)-1) for i in "sn!.sg! "]))'</span>（python版本的 rm -rf *）</div></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Test]]></title>
+      <url>/2017/10/18/test/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">Test<br><br><p></p>
+<h2 id="Code-Highligh"><a href="#Code-Highligh" class="headerlink" title="Code Highligh"></a>Code Highligh</h2><h3 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">'Hello World'</span></div></pre></td></tr></table></figure>
+<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="C-Sharp"><a href="#C-Sharp" class="headerlink" title="C Sharp"></a>C Sharp</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> <span class="title">HelloWorld</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">class</span> <span class="title">Program</span></div><div class="line">    &#123;</div><div class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></div><div class="line"><span class="function">        </span>&#123;</div><div class="line">            System.Console.Write(<span class="string">"Hello World"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">        System.out.println( <span class="string">"Hello World"</span> );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"Hello World"</span>)</div></pre></td></tr></table></figure>
+<h3 id="Python2"><a href="#Python2" class="headerlink" title="Python2"></a>Python2</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'Hello World'</span></div></pre></td></tr></table></figure>
+<h3 id="Python3"><a href="#Python3" class="headerlink" title="Python3"></a>Python3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(&apos;Hello World&apos;)</div></pre></td></tr></table></figure>
+<h3 id="VB"><a href="#VB" class="headerlink" title="VB"></a>VB</h3><figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Module</span> MainFrm</div><div class="line">    <span class="keyword">Sub</span> Main()</div><div class="line">        System.Console.WriteLine(<span class="string">"Hello World"</span>)</div><div class="line">    <span class="keyword">End</span> <span class="keyword">Sub</span></div><div class="line"><span class="keyword">End</span> <span class="keyword">Module</span></div></pre></td></tr></table></figure>
+<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">print</span>(<span class="string">"Hello World"</span>)</div></pre></td></tr></table></figure>
+<h3 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">fmt.Print(<span class="string">"Hello World"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span></span></div><div class="line">  <span class="keyword">return</span> <span class="string">"Hello World"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h3 id="Kotlin"><a href="#Kotlin" class="headerlink" title="Kotlin"></a>Kotlin</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    println(<span class="string">"Hello world"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://en.wikipedia.org/wiki/Hello_world_program" target="_blank" rel="external">Writing</a></p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="Quote"><a href="#Quote" class="headerlink" title="Quote"></a>Quote</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<h3 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h3><div id="echarts3120" style="width: 95%;height: 500px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts3120'));
+        // 指定图表的配置项和数据
+        var option = {
+    backgroundColor: '#001933',
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['利润', '支出', '收入'],
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['周一','周二','周三','周四','周五','周六','周日'],
+            textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+        }
+    ],
+    series : [
+        {
+            name:'利润',
+            type:'bar',
+            itemStyle : {
+                normal: {
+                    label: {show: true, position: 'inside'}
+                }
+            },
+            data:[200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+            name:'收入',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {
+                normal: {
+                    label : {show: true},
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+                }
+            },
+            data:[320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+            name:'支出',
+            type:'bar',
+            stack: '总量',
+            itemStyle: {normal: {
+                label : {show: true, position: 'left'}
+            }},
+            data:[-120, -132, -101, -134, -190, -230, -210]
+        }
+    ]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<p><br></p>
+<div id="echarts3131" style="width: 90%;height: 500px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts3131'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    backgroundColor: '#FFFFFFF',
+    title : {
+        text: '男性女性身高体重分布',
+        subtext: '抽样调查来自: Heinz  2003',
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    grid: {
+        left: '3%',
+        right: '7%',
+        bottom: '3%',
+        containLabel: true,
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    tooltip : {
+        // trigger: 'axis',
+        showDelay : 0,
+        formatter : function (params) {
+            if (params.value.length > 1) {
+                return params.seriesName + ' :<br/>'
+                + params.value[0] + 'cm '
+                + params.value[1] + 'kg ';
+            }
+            else {
+                return params.seriesName + ' :<br/>'
+                + params.name + ' : '
+                + params.value + 'kg ';
+            }
+        },
+        axisPointer:{
+            show: true,
+            type : 'cross',
+            lineStyle: {
+                type : 'dashed',
+                width : 1
+            }
+        },
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {},
+            brush: {
+                type: ['rect', 'polygon', 'clear']
+            },
+            textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+        }
+    },
+    brush: {
+    },
+    legend: {
+        data: ['女性','男性'],
+        left: 'center',
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    xAxis : [
+        {
+            type : 'value',
+            scale:true,
+            axisLabel : {
+                formatter: '{value} cm'
+            },
+            splitLine: {
+                show: false
+            },
+            textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            scale:true,
+            axisLabel : {
+                formatter: '{value} kg'
+            },
+            splitLine: {
+                show: false
+            },
+            textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+        }
+    ],
+    series : [
+        {
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+            name:'女性',
+            type:'scatter',
+            data: [[161.2, 51.6], [167.5, 59.0], [159.5, 49.2], [157.0, 63.0], [155.8, 53.6],
+                [170.0, 59.0], [159.1, 47.6], [166.0, 69.8], [176.2, 66.8], [160.2, 75.2],
+                [172.5, 55.2], [170.9, 54.2], [172.9, 62.5], [153.4, 42.0], [160.0, 50.0],
+                [147.2, 49.8], [168.2, 49.2], [175.0, 73.2], [157.0, 47.8], [167.6, 68.8],
+                [159.5, 50.6], [175.0, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8],
+                [174.0, 54.5], [173.0, 59.8], [179.9, 67.3], [170.5, 67.8], [160.0, 47.0],
+                [154.4, 46.2], [162.0, 55.0], [176.5, 83.0], [160.0, 54.4], [152.0, 45.8],
+                [162.1, 53.6], [170.0, 73.2], [160.2, 52.1], [161.3, 67.9], [166.4, 56.6],
+                [168.9, 62.3], [163.8, 58.5], [167.6, 54.5], [160.0, 50.2], [161.3, 60.3],
+                [167.6, 58.3], [165.1, 56.2], [160.0, 50.2], [170.0, 72.9], [157.5, 59.8],
+                [167.6, 61.0], [160.7, 69.1], [163.2, 55.9], [152.4, 46.5], [157.5, 54.3],
+                [168.3, 54.8], [180.3, 60.7], [165.5, 60.0], [165.0, 62.0], [164.5, 60.3],
+                [156.0, 52.7], [160.0, 74.3], [163.0, 62.0], [165.7, 73.1], [161.0, 80.0],
+                [162.0, 54.7], [166.0, 53.2], [174.0, 75.7], [172.7, 61.1], [167.6, 55.7],
+                [151.1, 48.7], [164.5, 52.3], [163.5, 50.0], [152.0, 59.3], [169.0, 62.5],
+                [164.0, 55.7], [161.2, 54.8], [155.0, 45.9], [170.0, 70.6], [176.2, 67.2],
+                [170.0, 69.4], [162.5, 58.2], [170.3, 64.8], [164.1, 71.6], [169.5, 52.8],
+                [163.2, 59.8], [154.5, 49.0], [159.8, 50.0], [173.2, 69.2], [170.0, 55.9],
+                [161.4, 63.4], [169.0, 58.2], [166.2, 58.6], [159.4, 45.7], [162.5, 52.2],
+                [159.0, 48.6], [162.8, 57.8], [159.0, 55.6], [179.8, 66.8], [162.9, 59.4],
+                [161.0, 53.6], [151.1, 73.2], [168.2, 53.4], [168.9, 69.0], [173.2, 58.4],
+                [171.8, 56.2], [178.0, 70.6], [164.3, 59.8], [163.0, 72.0], [168.5, 65.2],
+                [166.8, 56.6], [172.7, 105.2], [163.5, 51.8], [169.4, 63.4], [167.8, 59.0],
+                [159.5, 47.6], [167.6, 63.0], [161.2, 55.2], [160.0, 45.0], [163.2, 54.0],
+                [162.2, 50.2], [161.3, 60.2], [149.5, 44.8], [157.5, 58.8], [163.2, 56.4],
+                [172.7, 62.0], [155.0, 49.2], [156.5, 67.2], [164.0, 53.8], [160.9, 54.4],
+                [162.8, 58.0], [167.0, 59.8], [160.0, 54.8], [160.0, 43.2], [168.9, 60.5],
+                [158.2, 46.4], [156.0, 64.4], [160.0, 48.8], [167.1, 62.2], [158.0, 55.5],
+                [167.6, 57.8], [156.0, 54.6], [162.1, 59.2], [173.4, 52.7], [159.8, 53.2],
+                [170.5, 64.5], [159.2, 51.8], [157.5, 56.0], [161.3, 63.6], [162.6, 63.2],
+                [160.0, 59.5], [168.9, 56.8], [165.1, 64.1], [162.6, 50.0], [165.1, 72.3],
+                [166.4, 55.0], [160.0, 55.9], [152.4, 60.4], [170.2, 69.1], [162.6, 84.5],
+                [170.2, 55.9], [158.8, 55.5], [172.7, 69.5], [167.6, 76.4], [162.6, 61.4],
+                [167.6, 65.9], [156.2, 58.6], [175.2, 66.8], [172.1, 56.6], [162.6, 58.6],
+                [160.0, 55.9], [165.1, 59.1], [182.9, 81.8], [166.4, 70.7], [165.1, 56.8],
+                [177.8, 60.0], [165.1, 58.2], [175.3, 72.7], [154.9, 54.1], [158.8, 49.1],
+                [172.7, 75.9], [168.9, 55.0], [161.3, 57.3], [167.6, 55.0], [165.1, 65.5],
+                [175.3, 65.5], [157.5, 48.6], [163.8, 58.6], [167.6, 63.6], [165.1, 55.2],
+                [165.1, 62.7], [168.9, 56.6], [162.6, 53.9], [164.5, 63.2], [176.5, 73.6],
+                [168.9, 62.0], [175.3, 63.6], [159.4, 53.2], [160.0, 53.4], [170.2, 55.0],
+                [162.6, 70.5], [167.6, 54.5], [162.6, 54.5], [160.7, 55.9], [160.0, 59.0],
+                [157.5, 63.6], [162.6, 54.5], [152.4, 47.3], [170.2, 67.7], [165.1, 80.9],
+                [172.7, 70.5], [165.1, 60.9], [170.2, 63.6], [170.2, 54.5], [170.2, 59.1],
+                [161.3, 70.5], [167.6, 52.7], [167.6, 62.7], [165.1, 86.3], [162.6, 66.4],
+                [152.4, 67.3], [168.9, 63.0], [170.2, 73.6], [175.2, 62.3], [175.2, 57.7],
+                [160.0, 55.4], [165.1, 104.1], [174.0, 55.5], [170.2, 77.3], [160.0, 80.5],
+                [167.6, 64.5], [167.6, 72.3], [167.6, 61.4], [154.9, 58.2], [162.6, 81.8],
+                [175.3, 63.6], [171.4, 53.4], [157.5, 54.5], [165.1, 53.6], [160.0, 60.0],
+                [174.0, 73.6], [162.6, 61.4], [174.0, 55.5], [162.6, 63.6], [161.3, 60.9],
+                [156.2, 60.0], [149.9, 46.8], [169.5, 57.3], [160.0, 64.1], [175.3, 63.6],
+                [169.5, 67.3], [160.0, 75.5], [172.7, 68.2], [162.6, 61.4], [157.5, 76.8],
+                [176.5, 71.8], [164.4, 55.5], [160.7, 48.6], [174.0, 66.4], [163.8, 67.3]
+            ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    name: '女性分布区间',
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
+                data : [
+                    {type : 'average', name: '平均值'},
+                    { xAxis: 160 }
+                ]
+            }
+        },
+        {
+            name:'男性',
+            type:'scatter',
+            data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7], [186.5, 72.6], [187.2, 78.8],
+                [181.5, 74.8], [184.0, 86.4], [184.5, 78.4], [175.0, 62.0], [184.0, 81.6],
+                [180.0, 76.6], [177.8, 83.6], [192.0, 90.0], [176.0, 74.6], [174.0, 71.0],
+                [184.0, 79.6], [192.7, 93.8], [171.5, 70.0], [173.0, 72.4], [176.0, 85.9],
+                [176.0, 78.8], [180.5, 77.8], [172.7, 66.2], [176.0, 86.4], [173.5, 81.8],
+                [178.0, 89.6], [180.3, 82.8], [180.3, 76.4], [164.5, 63.2], [173.0, 60.9],
+                [183.5, 74.8], [175.5, 70.0], [188.0, 72.4], [189.2, 84.1], [172.8, 69.1],
+                [170.0, 59.5], [182.0, 67.2], [170.0, 61.3], [177.8, 68.6], [184.2, 80.1],
+                [186.7, 87.8], [171.4, 84.7], [172.7, 73.4], [175.3, 72.1], [180.3, 82.6],
+                [182.9, 88.7], [188.0, 84.1], [177.2, 94.1], [172.1, 74.9], [167.0, 59.1],
+                [169.5, 75.6], [174.0, 86.2], [172.7, 75.3], [182.2, 87.1], [164.1, 55.2],
+                [163.0, 57.0], [171.5, 61.4], [184.2, 76.8], [174.0, 86.8], [174.0, 72.2],
+                [177.0, 71.6], [186.0, 84.8], [167.0, 68.2], [171.8, 66.1], [182.0, 72.0],
+                [167.0, 64.6], [177.8, 74.8], [164.5, 70.0], [192.0, 101.6], [175.5, 63.2],
+                [171.2, 79.1], [181.6, 78.9], [167.4, 67.7], [181.1, 66.0], [177.0, 68.2],
+                [174.5, 63.9], [177.5, 72.0], [170.5, 56.8], [182.4, 74.5], [197.1, 90.9],
+                [180.1, 93.0], [175.5, 80.9], [180.6, 72.7], [184.4, 68.0], [175.5, 70.9],
+                [180.6, 72.5], [177.0, 72.5], [177.1, 83.4], [181.6, 75.5], [176.5, 73.0],
+                [175.0, 70.2], [174.0, 73.4], [165.1, 70.5], [177.0, 68.9], [192.0, 102.3],
+                [176.5, 68.4], [169.4, 65.9], [182.1, 75.7], [179.8, 84.5], [175.3, 87.7],
+                [184.9, 86.4], [177.3, 73.2], [167.4, 53.9], [178.1, 72.0], [168.9, 55.5],
+                [157.2, 58.4], [180.3, 83.2], [170.2, 72.7], [177.8, 64.1], [172.7, 72.3],
+                [165.1, 65.0], [186.7, 86.4], [165.1, 65.0], [174.0, 88.6], [175.3, 84.1],
+                [185.4, 66.8], [177.8, 75.5], [180.3, 93.2], [180.3, 82.7], [177.8, 58.0],
+                [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 116.4], [163.8, 72.2],
+                [188.0, 83.6], [198.1, 85.5], [175.3, 90.9], [166.4, 85.9], [190.5, 89.1],
+                [166.4, 75.0], [177.8, 77.7], [179.7, 86.4], [172.7, 90.9], [190.5, 73.6],
+                [185.4, 76.4], [168.9, 69.1], [167.6, 84.5], [175.3, 64.5], [170.2, 69.1],
+                [190.5, 108.6], [177.8, 86.4], [190.5, 80.9], [177.8, 87.7], [184.2, 94.5],
+                [176.5, 80.2], [177.8, 72.0], [180.3, 71.4], [171.4, 72.7], [172.7, 84.1],
+                [172.7, 76.8], [177.8, 63.6], [177.8, 80.9], [182.9, 80.9], [170.2, 85.5],
+                [167.6, 68.6], [175.3, 67.7], [165.1, 66.4], [185.4, 102.3], [181.6, 70.5],
+                [172.7, 95.9], [190.5, 84.1], [179.1, 87.3], [175.3, 71.8], [170.2, 65.9],
+                [193.0, 95.9], [171.4, 91.4], [177.8, 81.8], [177.8, 96.8], [167.6, 69.1],
+                [167.6, 82.7], [180.3, 75.5], [182.9, 79.5], [176.5, 73.6], [186.7, 91.8],
+                [188.0, 84.1], [188.0, 85.9], [177.8, 81.8], [174.0, 82.5], [177.8, 80.5],
+                [171.4, 70.0], [185.4, 81.8], [185.4, 84.1], [188.0, 90.5], [188.0, 91.4],
+                [182.9, 89.1], [176.5, 85.0], [175.3, 69.1], [175.3, 73.6], [188.0, 80.5],
+                [188.0, 82.7], [175.3, 86.4], [170.5, 67.7], [179.1, 92.7], [177.8, 93.6],
+                [175.3, 70.9], [182.9, 75.0], [170.8, 93.2], [188.0, 93.2], [180.3, 77.7],
+                [177.8, 61.4], [185.4, 94.1], [168.9, 75.0], [185.4, 83.6], [180.3, 85.5],
+                [174.0, 73.9], [167.6, 66.8], [182.9, 87.3], [160.0, 72.3], [180.3, 88.6],
+                [167.6, 75.5], [186.7, 101.4], [175.3, 91.1], [175.3, 67.3], [175.9, 77.7],
+                [175.3, 81.8], [179.1, 75.5], [181.6, 84.5], [177.8, 76.6], [182.9, 85.0],
+                [177.8, 102.5], [184.2, 77.3], [179.1, 71.8], [176.5, 87.9], [188.0, 94.3],
+                [174.0, 70.9], [167.6, 64.5], [170.2, 77.3], [167.6, 72.3], [188.0, 87.3],
+                [174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9],
+                [180.3, 73.2], [167.6, 76.3], [183.0, 65.9], [183.0, 90.9], [179.1, 89.1],
+                [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
+                [180.3, 83.2], [180.3, 83.2]
+            ],
+            textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed',
+                        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                    }
+                },
+                data: [[{
+                    name: '男性分布区间',
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
+                data : [
+                    {type : 'average', name: '平均值'},
+                    { xAxis: 170 }
+                ]
+            }
+        }
+    ]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<p><br><br><div id="echarts2312" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts2312'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    backgroundColor: '#FFFFFFF',
+
+    title: {
+        text: 'Customized Pie',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:274, name:'联盟广告'},
+                {value:235, name:'视频广告'},
+                {value:400, name:'搜索引擎'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 1)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        }
+    ]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script></p>
+<p><br><br><div id="echarts135" style="width: 110%;height: 400px;margin: 0 auto"></div>
+<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts135'));
+        // 指定图表的配置项和数据
+        var option = option = {
+    backgroundColor: '#FFFFFFF',
+    title : {
+        text: '南丁格尔玫瑰图',
+        x:'center',
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        x : 'center',
+        y : 'bottom',
+        data:['rose1','rose2','rose3','rose4','rose5','rose6','rose7','rose8'],
+        textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'半径模式',
+            type:'pie',
+            radius : [20, 110],
+            center : ['25%', '50%'],
+            roseType : 'radius',
+            label: {
+                normal: {
+                    show: false,
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {value:10, name:'rose1'},
+                {value:5, name:'rose2'},
+                {value:15, name:'rose3'},
+                {value:25, name:'rose4'},
+                {value:20, name:'rose5'},
+                {value:35, name:'rose6'},
+                {value:30, name:'rose7'},
+                {value:40, name:'rose8'}
+            ]
+        },
+        {
+            name:'面积模式',
+            type:'pie',
+            radius : [30, 110],
+            center : ['75%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:10, name:'rose1'},
+                {value:5, name:'rose2'},
+                {value:15, name:'rose3'},
+                {value:25, name:'rose4'},
+                {value:20, name:'rose5'},
+                {value:35, name:'rose6'},
+                {value:30, name:'rose7'},
+                {value:40, name:'rose8'}
+            ]
+        }
+    ]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script></p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p><a href="/images/1.jpg" title="jpg" class="gallery-item"><img src="/images/1.jpg" alt="jpg"></a><br><a href="/images/2.jpg" title="jpg" class="gallery-item"><img src="/images/2.jpg" alt="jpg"></a><br><a href="/images/3.jpg" title="jpg" class="gallery-item"><img src="/images/3.jpg" alt="jpg"></a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></div>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[categories]]></title>
+      <url>/categories/index.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></div>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>/tags/index.html</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></div>]]></content>
+    </entry>
+    
+  
+</search>
