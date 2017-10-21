@@ -1,0 +1,660 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="记载杂事" />
+
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Debian Linux">
+<meta property="og:url" content="http://127.0.0.1/2017/10/19/debian-1/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-19T09:38:45.680Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Debian Linux">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> Debian Linux | blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Just for fun</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+      
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Debian Linux
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2017-10-19T15:53:19+08:00" content="2017-10-19">
+            2017-10-19
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<h2 id="Linux基本命令"><a href="#Linux基本命令" class="headerlink" title="Linux基本命令"></a>Linux基本命令</h2><h3 id="Linux运行级别"><a href="#Linux运行级别" class="headerlink" title="Linux运行级别"></a>Linux运行级别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">init 0：halt</div><div class="line">init 1：单用户</div><div class="line">init 2～5：多用户</div><div class="line">init 6：reboot</div></pre></td></tr></table></figure>
+<h3 id="用户登录与退出登录"><a href="#用户登录与退出登录" class="headerlink" title="用户登录与退出登录"></a>用户登录与退出登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ 普通用户</div><div class="line"><span class="comment"># root用户</span></div></pre></td></tr></table></figure>
+<h3 id="Bash操作"><a href="#Bash操作" class="headerlink" title="Bash操作"></a>Bash操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">命令历史</div><div class="line"><span class="built_in">history</span></div><div class="line">！：命令键入历史相关联字符</div><div class="line">！！：键入上一事件</div><div class="line">别名：<span class="built_in">alias</span></div></pre></td></tr></table></figure>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span></div><div class="line">Ctrl + D</div></pre></td></tr></table></figure>
+<h3 id="修改口令"><a href="#修改口令" class="headerlink" title="修改口令"></a>修改口令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure>
+<h3 id="开启虚拟控制台tty"><a href="#开启虚拟控制台tty" class="headerlink" title="开启虚拟控制台tty"></a>开启虚拟控制台tty</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ctrl+F1～F6</div></pre></td></tr></table></figure>
+<h3 id="常用系统命令"><a href="#常用系统命令" class="headerlink" title="常用系统命令"></a>常用系统命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">删除行首到光标间内容：Ctrl + U</div><div class="line">屏幕显示文件内容:  cat files</div><div class="line">复制文件和目录:  cp file1 file2</div><div class="line">显示文件内容:  less files</div><div class="line">移动，重命名文件:  mv file1 file2</div><div class="line">删除文件名:  rm files</div><div class="line">删除空目录:  rmdir</div><div class="line">查找文件:  find files</div><div class="line">在文件中搜索匹配字符串:  grep search-string files</div><div class="line">将命令输出添加到文件尾部:  <span class="built_in">command</span> &gt;&gt; file</div></pre></td></tr></table></figure>
+<h3 id="系统关闭"><a href="#系统关闭" class="headerlink" title="系统关闭"></a>系统关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">多用户下：shutdown -h now</div><div class="line">单用户下：poweroff -i -f         halt</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">shell种类：bash   csh    zsh   fish</div><div class="line">shell时间命令：date   cal</div></pre></td></tr></table></figure>
+<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* ? [ ]</div><div class="line">反引号：` shell解释为命令行，优先执行，并将结果替代反引号内容，例如 ls `<span class="built_in">pwd</span>` 则列举当前目录文件</div><div class="line">注释符：<span class="comment">#</span></div></pre></td></tr></table></figure>
+<h3 id="管道字符"><a href="#管道字符" class="headerlink" title="管道字符"></a>管道字符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">： |  &gt;  &lt;&lt;  &gt;&gt;</div></pre></td></tr></table></figure>
+<h3 id="标准输入输出"><a href="#标准输入输出" class="headerlink" title="标准输入输出"></a>标准输入输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wc：统计指定文件包含行数，单词数，字符数。</div></pre></td></tr></table></figure>
+<h3 id="显示文件内容"><a href="#显示文件内容" class="headerlink" title="显示文件内容"></a>显示文件内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cat （也可将两个文件连接在一起）</div><div class="line">文本：    more        less</div><div class="line">head [ -n ] ：指定文件前n行内容</div><div class="line">tail [ -n ]：显示文件后n行内容</div><div class="line">od：指定以不同进制显示文件</div><div class="line">d：十进制    o：八进制    x：十六进制</div><div class="line">c：ASCII字符    f：浮点数    u：无符号十进制</div><div class="line">ln：文件链接命令</div><div class="line">ln [ 选项 ] 目标 [ 链接名 ]    ln [ 选项 ]  目标 目录</div></pre></td></tr></table></figure>
+<h3 id="改变访问权限命令"><a href="#改变访问权限命令" class="headerlink" title="改变访问权限命令"></a>改变访问权限命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod </div><div class="line">r：可读    w：可写    x：可执行</div><div class="line">0：无权限   1：可执行   2：可写    4：可读    6：可读可写   7：可读可写可执行</div></pre></td></tr></table></figure>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">目录创建和删除命令：mkdir    rmdir</div><div class="line">改变工作目录：<span class="built_in">cd</span></div><div class="line">当前工作路径：<span class="built_in">pwd</span></div><div class="line">列出当前工作目录文件：ls</div><div class="line">复制删除移动：cp    rm    mv</div><div class="line">文件统计命令：wc    comm （有序文件比较）   diff （逐行比较两个文本文件）</div><div class="line">修改文件存取时间或者创建空文件：touch</div><div class="line">装载目录    mount  /dev/sda1：装载sda1分区</div><div class="line">卸载目录    umount  /dev/sda1：卸载sda1分区</div></pre></td></tr></table></figure>
+<h3 id="文件内容查询命令"><a href="#文件内容查询命令" class="headerlink" title="文件内容查询命令"></a>文件内容查询命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">语法  grep [ 选项 ] [ 查找模式 ] [ 文件名 ]</div><div class="line">grep （一次搜索一个指定模式） </div><div class="line">fgrep  （检索固定字符串） </div><div class="line">egrep （检索扩展的正则表达式）</div><div class="line">find（目录结构中搜索文件，并执行指定操作） </div><div class="line">locate（查找文件，速度比find快）</div><div class="line">sed：非交互性文本流编辑器，可从文件和字符串抽取所需信息</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">调用的3种格式：</div><div class="line">命令行方式：sed [ 选项 ]  sed命令 输入文件</div><div class="line">sed脚本文件：包含sed命令脚本文件  [ 选项 ] 输入文件</div><div class="line">sed调用脚本文件：sed [ 选项 ]  -f 不包含sed命令的脚本文件  输入文件</div><div class="line">sed选项</div><div class="line">-n：不打印    -c：下条命令是编辑命令    -f：调用sed脚本文件</div><div class="line">sed 定位文本方式（行号，正则）</div><div class="line">awk：编程语言，对文本和数据进行处理，支持正则，特点是对文本列的</div><div class="line">操作，基本功能是在文件或字符串中基于指定规则来分解抽取信息，或输出信息</div></pre></td></tr></table></figure>
+<h3 id="文本处理命令"><a href="#文本处理命令" class="headerlink" title="文本处理命令"></a>文本处理命令</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sort（对文件中各行进行排序）</div><div class="line">uniq（读取输入文件，并比较相邻行，删除重复行）</div></pre></td></tr></table></figure>
+<h3 id="基本系统维护命令"><a href="#基本系统维护命令" class="headerlink" title="基本系统维护命令"></a>基本系统维护命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">wall（对全部已经登录用户发送信息）</div><div class="line">write（向系统中某一个用户发送信息）</div><div class="line">mesg（设定是否允许其他用户用write给自己发信息）</div><div class="line">sync（强制将内存中数据写回硬盘，避免信息丢失）</div><div class="line">free（查看内存使用情况）</div><div class="line">uptime（显示系统已经运行了多长时间）</div><div class="line">clear（清屏）等效于 Ctrl+L</div></pre></td></tr></table></figure>
+<h3 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim</div><div class="line">emacs</div><div class="line">nano</div><div class="line">gedit</div></pre></td></tr></table></figure>
+<h2 id="Linux系统管理"><a href="#Linux系统管理" class="headerlink" title="Linux系统管理"></a>Linux系统管理</h2><h3 id="用户与组管理"><a href="#用户与组管理" class="headerlink" title="用户与组管理"></a>用户与组管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">用户管理</div><div class="line">useradd （添加用户）</div><div class="line">passwd（设定用户口令）</div><div class="line">usermod（修改用户）</div><div class="line">userdel -r （删除用户）</div><div class="line">组管理</div><div class="line">groupadd（添加组）</div><div class="line">groupmod（修改组）</div><div class="line">groupdel（删除组）</div></pre></td></tr></table></figure>
+<h3 id="相关配置信息"><a href="#相关配置信息" class="headerlink" title="相关配置信息"></a>相关配置信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/etc/passwd文件（保留每个用户帐号多种信息）</div><div class="line">/etc/shadow文件（将加密后口令分离出来存放位置，由pwconv根据/etc/passwd数据自动产生）</div><div class="line">/etc/group文件（分组将多个用户分一起，方便用户权限管理）</div><div class="line">/etc/gshadow（指定相应组加密口令和特定组管理员权限）</div><div class="line">/etc/skel（存放默认一组shell配置文件，也可将每个用户都需要的文件放在该目录下，so每个用户主目录都有此文件拷贝）</div><div class="line">/etc/login.defs（生成新用户时配置信息文件，包含电子邮件目录，口令过期时间，用户ID，组ID等）</div></pre></td></tr></table></figure>
+<h3 id="文件属主和权限"><a href="#文件属主和权限" class="headerlink" title="文件属主和权限"></a>文件属主和权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">d               rwx             r-x            r-x</div><div class="line">文件类型       所有者权限          组权限         其他用户权限</div></pre></td></tr></table></figure>
+<h3 id="分区管理"><a href="#分区管理" class="headerlink" title="分区管理"></a>分区管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fdisk（专家级别分区工具）</div><div class="line">cfdisk</div><div class="line">mkfs（格式化成linux分区）</div><div class="line">mkfs -t ext4 /dev/sda1（将/dev/sda1分区格式化为ext4文件系统）</div><div class="line">maswap（格式化成swap分区）</div></pre></td></tr></table></figure>
+<h3 id="proc文件系统"><a href="#proc文件系统" class="headerlink" title="proc文件系统"></a>proc文件系统</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">进程信息</div><div class="line">/proc目录下有进程号PID命名的子目录，是读取进程信息的接口</div><div class="line">高级电源管理APM信息</div><div class="line">/proc/apm</div><div class="line">CPU信息</div><div class="line">/proc/cpuinfo</div><div class="line">负载信息</div><div class="line">/proc/loadavg包含负载信息，3个0～1变化的数字衡量，分别为最高利用率，平均利用率，最低利用率</div><div class="line">系统内存信息</div><div class="line">/proc/meminfo包含系统内存详细信息，显示物理内存的数量，可用交换空间数量等</div></pre></td></tr></table></figure>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">查看进程</div><div class="line">ps</div><div class="line">top</div><div class="line">pstree</div><div class="line">启动进程</div><div class="line">手工启动    gedit &amp;    ：&amp;表示直接放在后台运行程序</div><div class="line">结束进程</div><div class="line"><span class="built_in">kill</span> PID</div></pre></td></tr></table></figure>
+<h3 id="内核模块"><a href="#内核模块" class="headerlink" title="内核模块"></a>内核模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">modprode -c：显示正在被使用的模块配置</div><div class="line">modprode -r [modname]：移除模块</div><div class="line">lsmod：列出已经加载的模块 </div><div class="line">modinfo [modname]：显示模块信息</div></pre></td></tr></table></figure>
+<h3 id="系统日志管理"><a href="#系统日志管理" class="headerlink" title="系统日志管理"></a>系统日志管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">3种主要的日志子系统</div><div class="line">连接时间日志，写入到/var/<span class="built_in">log</span>/wtmp和/var/run/utmp，使系统管理员能够跟踪谁何时登录系统</div><div class="line">进程统计日志，由内核执行，当进程终止时，该进程在进程统计文件写一个记录，目的是为系统基本服务提供命令使用统计</div><div class="line">错误日志，由syslogd执行，各种系统守护进程、用户进程和内核通过syslog向文件/var/<span class="built_in">log</span>/messages报告值得注意的事件</div><div class="line"></div><div class="line">常用日志文件</div><div class="line">/var/<span class="built_in">log</span>/messages：记录与硬件和服务相关联的各种信息</div><div class="line">/var/<span class="built_in">log</span>/dmsg：保存内核启动信息</div><div class="line">登录日志：记录用户登录和退出时间</div><div class="line">其他服务日志：/var/<span class="built_in">log</span>/  例如apache等服务日志</div><div class="line"></div><div class="line">syslogd（日志记录系统活动的守护进程，实现对日志统一、集中控制结构）</div><div class="line">logrotate（管理系统日志备份工作，是一个集中管理工具，可用作查看并且备份日志文件，并创建新的日志文件，配置文件为/etc/logrotate.conf）</div></pre></td></tr></table></figure>
+<h3 id="查询依赖库"><a href="#查询依赖库" class="headerlink" title="查询依赖库"></a>查询依赖库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ldd</div></pre></td></tr></table></figure>
+<h3 id="Linux网络设置"><a href="#Linux网络设置" class="headerlink" title="Linux网络设置"></a>Linux网络设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ip（显示当前主机激活的网络接口信息）</div><div class="line">ifconfig（显示当前主机激活的网络接口信息）</div><div class="line">route（显示当前系统路由信息）</div><div class="line">netstat（显示Linux系统路由信息（路由表））</div><div class="line">nslookup（查询和交互两种方式）</div><div class="line">ping（测试当前主机到网络其他主机网络连接是否正常）</div><div class="line">DHCP（配置动态获取IP地址）</div><div class="line">DNS（设置DNS服务器地址）</div><div class="line">nslookup（DNS服务器查询）</div><div class="line">dig（DNS服务器查询）</div><div class="line">host（DNS服务器查询）</div></pre></td></tr></table></figure>
+<h3 id="安装Apache服务器"><a href="#安装Apache服务器" class="headerlink" title="安装Apache服务器"></a>安装Apache服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">apt安装apache2服务器</div><div class="line">apt-get install apache2</div><div class="line">ps aux | grep apache2（查看apache2相关进程）</div><div class="line"></div><div class="line">从源码安装apache2服务器：</div><div class="line">1、获取源代码：Apache网站上获取apache2源代码</div><div class="line">2、将源代码解压缩：tar -zxvf apache-version</div><div class="line">3、进入源代码树目录：<span class="built_in">cd</span> apache-version</div><div class="line">4、配置源代码： 直接执行./configure --prefix=PREFIX（PREFIX用路径代替，例如/usr/<span class="built_in">local</span>/apache）</div><div class="line">5、生成Apache：make</div><div class="line">6、安装服务器：make install</div><div class="line"></div><div class="line">配置web服务器</div><div class="line">apache服务的配置文件</div><div class="line">全局配置指令</div><div class="line">配置默认服务器</div><div class="line">配置虚拟服务器</div><div class="line"></div><div class="line">web服务器的启动和停止</div><div class="line">/etc/init.d/apache2 start    ： 启动apache2服务器</div><div class="line">/etc/init.d/apache2 restart ： 重新启动apache2服务器，通常修改配置文件后使用</div><div class="line">/etc/init.d/apache2 stop    ： 停止apache2服务器进程</div><div class="line">inetd与xinetd</div><div class="line"></div><div class="line">超级守护进程：inetd 统一为许多daemon提供监听服务</div><div class="line">扩展的超级守护进程xinetd，功能更强，配置较复杂</div><div class="line">使用inetd启动apache服务器，首先查看/etc/services文件80端口是否由对应服务，然后在inetd配置文件/etc/inetd.conf中添加指令</div><div class="line">让inetd监听客户端对apache的连接请求，最后停止daemon形式运行的apache服务器，后修改其配置文件/etc/apche/httpd.conf，注释掉之前的standalone启动方式，改为inetd方式。</div></pre></td></tr></table></figure>
+<h2 id="Debian基本命令"><a href="#Debian基本命令" class="headerlink" title="Debian基本命令"></a>Debian基本命令</h2><h3 id="系统基本设置"><a href="#系统基本设置" class="headerlink" title="系统基本设置"></a>系统基本设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">debconf（Deb配置命令）</div><div class="line"><span class="built_in">fc</span>-cache -f -v（更新字体信息缓存）</div></pre></td></tr></table></figure>
+<h3 id="系统配置工具"><a href="#系统配置工具" class="headerlink" title="系统配置工具"></a>系统配置工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/etc/hostname（配置主机名）</div><div class="line">/etc/network/interfaces（网络配置）</div></pre></td></tr></table></figure>
+<h3 id="apt管理软件包"><a href="#apt管理软件包" class="headerlink" title="apt管理软件包"></a>apt管理软件包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">设置APT源（/etc/apt/sources.list）</div><div class="line">apt-get update（升级）</div><div class="line">apt-get upgrade（更新）</div><div class="line">apt-cache stats（显示系统所使用数据源统计信息）</div><div class="line">apt-cache search（按关键词查找相关软件包）</div><div class="line">apt-cache depends（查询指定软件包依赖，冲突，替代软件包信息）</div><div class="line">apt-cache rdepend（查询指定软件包反向依赖信息）</div><div class="line">apt-get install（安装指定软件包）</div><div class="line">apt-get --reinstall install（重新安装指定软件包）</div><div class="line">apt-get remove（不完全卸载指定软件包，保留配置信息）</div><div class="line">apt-get --purge remove（完全卸载，不保留配置）</div><div class="line">apt-get clean（清除在apt-get下载安装软件包时在/var/cache/apt/archives目录中的缓存deb包）</div><div class="line">apt-get check：更新缓冲区并检查损坏的软件包</div><div class="line">apt-cache show -a package：显示dists中软件包描述信息</div><div class="line">apt-cache showsrc package：显示源码包的信息</div><div class="line">apt-cache showrc（查看源码包信息）</div><div class="line">apt-get <span class="built_in">source</span>（下载指定软件的源码包到当前目录）</div><div class="line">apt-get build-deb（为指定源码包构建编译环境）</div></pre></td></tr></table></figure>
+<h3 id="建立本地APT代理服务"><a href="#建立本地APT代理服务" class="headerlink" title="建立本地APT代理服务"></a>建立本地APT代理服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">安装apt-proxy服务器（apt-get install apt-proxy）</div><div class="line">配置apt-proxy服务器（/etc/apt-proxy/apt-proxy-v2.conf）</div><div class="line">使用apt-proxy服务器作为软件库源</div></pre></td></tr></table></figure>
+<h3 id="dpkg包管理"><a href="#dpkg包管理" class="headerlink" title="dpkg包管理"></a>dpkg包管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">dpkg --audit | C（搜索未完成安装的软件包）</div><div class="line">dpkg -l（查询系统已经安装deb包信息）</div><div class="line">dpkg -s（查询指定软件包详细信息）</div><div class="line">dpkg -L（查询系统已经安装软件包所安装的文件）</div><div class="line">dpkg -S（查询系统某文件属于哪个软件包）</div><div class="line">dpkg -c（查询deb包文件所包含的文件） </div><div class="line">dpkg -i（安装deb软件包）</div><div class="line">dpkg -r（不完全卸载软件包，但保留配置信息）</div><div class="line">dpkg -P（完全卸载软件包，同时删除配置信息）</div></pre></td></tr></table></figure>
+<h3 id="Debian高级包管理工具"><a href="#Debian高级包管理工具" class="headerlink" title="Debian高级包管理工具"></a>Debian高级包管理工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tasksel（安装系统过程调用执行的工具，可用来选择需要安装或卸载的软件组件）</div><div class="line">dselect（难度高的deb管理工具）</div><div class="line">aptitude（操作简单，安装与解决依赖库问题）</div><div class="line">synaptic（新立德，apt图形包管理工具）</div></pre></td></tr></table></figure>
+<h2 id="不能运行命令"><a href="#不能运行命令" class="headerlink" title="不能运行命令"></a>不能运行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf / （删除根分区全部的文件）</div><div class="line">sudo rm -rf . （删除当前目录下的所有文件）</div><div class="line">sudo rm -rf * （同上）</div><div class="line">rm -rf * or rm -rf *.* （同上）</div><div class="line">rm -rf ~ / &amp; （删除根分区和home目录，即使你不是root，home目录还是不能幸免）</div><div class="line">sudo mkfs.xxxx（擦除硬盘分区，xxxx 可以是 vfat、ext2、ext3、bfs）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/zero of=/dev/sda （全部硬盘清零）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/sda of=/dev/sdb （用第一块硬盘的内容覆盖第二块的内容）</div><div class="line">sudo dd <span class="keyword">if</span>=something of=/dev/sda （往硬盘上写垃圾数据）</div><div class="line">any_command &gt; /dev/sda （用随意的数据破坏硬盘）</div><div class="line">:()&#123;:|:&amp;&#125;;:（fork炸弹）</div><div class="line">fork <span class="keyword">while</span> fork（同上）</div><div class="line">python -c <span class="string">'import os; os.system("".join([chr(ord(i)-1) for i in "sn!.sg! "]))'</span>（python版本的 rm -rf *）</div></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/19/机器学习/" rel="prev">机器学习</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/18/test/" rel="next">测试</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+    </div>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="wishd" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">wishd</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">记载杂事</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux基本命令"><span class="nav-number">1.</span> <span class="nav-text">Linux基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux运行级别"><span class="nav-number">1.1.</span> <span class="nav-text">Linux运行级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户登录与退出登录"><span class="nav-number">1.2.</span> <span class="nav-text">用户登录与退出登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bash操作"><span class="nav-number">1.3.</span> <span class="nav-text">Bash操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出"><span class="nav-number">1.4.</span> <span class="nav-text">退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改口令"><span class="nav-number">1.5.</span> <span class="nav-text">修改口令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启虚拟控制台tty"><span class="nav-number">1.6.</span> <span class="nav-text">开启虚拟控制台tty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用系统命令"><span class="nav-number">1.7.</span> <span class="nav-text">常用系统命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统关闭"><span class="nav-number">1.8.</span> <span class="nav-text">系统关闭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通配符"><span class="nav-number">1.9.</span> <span class="nav-text">通配符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管道字符"><span class="nav-number">1.10.</span> <span class="nav-text">管道字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准输入输出"><span class="nav-number">1.11.</span> <span class="nav-text">标准输入输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示文件内容"><span class="nav-number">1.12.</span> <span class="nav-text">显示文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变访问权限命令"><span class="nav-number">1.13.</span> <span class="nav-text">改变访问权限命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">1.14.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件内容查询命令"><span class="nav-number">1.15.</span> <span class="nav-text">文件内容查询命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本处理命令"><span class="nav-number">1.16.</span> <span class="nav-text">文本处理命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本系统维护命令"><span class="nav-number">1.17.</span> <span class="nav-text">基本系统维护命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本编辑器"><span class="nav-number">1.18.</span> <span class="nav-text">文本编辑器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux系统管理"><span class="nav-number">2.</span> <span class="nav-text">Linux系统管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户与组管理"><span class="nav-number">2.1.</span> <span class="nav-text">用户与组管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关配置信息"><span class="nav-number">2.2.</span> <span class="nav-text">相关配置信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件属主和权限"><span class="nav-number">2.3.</span> <span class="nav-text">文件属主和权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分区管理"><span class="nav-number">2.4.</span> <span class="nav-text">分区管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proc文件系统"><span class="nav-number">2.5.</span> <span class="nav-text">proc文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程"><span class="nav-number">2.6.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核模块"><span class="nav-number">2.7.</span> <span class="nav-text">内核模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统日志管理"><span class="nav-number">2.8.</span> <span class="nav-text">系统日志管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询依赖库"><span class="nav-number">2.9.</span> <span class="nav-text">查询依赖库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux网络设置"><span class="nav-number">2.10.</span> <span class="nav-text">Linux网络设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Apache服务器"><span class="nav-number">2.11.</span> <span class="nav-text">安装Apache服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debian基本命令"><span class="nav-number">3.</span> <span class="nav-text">Debian基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统基本设置"><span class="nav-number">3.1.</span> <span class="nav-text">系统基本设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统配置工具"><span class="nav-number">3.2.</span> <span class="nav-text">系统配置工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apt管理软件包"><span class="nav-number">3.3.</span> <span class="nav-text">apt管理软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立本地APT代理服务"><span class="nav-number">3.4.</span> <span class="nav-text">建立本地APT代理服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dpkg包管理"><span class="nav-number">3.5.</span> <span class="nav-text">dpkg包管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian高级包管理工具"><span class="nav-number">3.6.</span> <span class="nav-text">Debian高级包管理工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不能运行命令"><span class="nav-number">4.</span> <span class="nav-text">不能运行命令</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wishd
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

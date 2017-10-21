@@ -1,0 +1,657 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="记载杂事" />
+
+
+
+  <meta name="keywords" content="Machine learning," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="keywords" content="Machine learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习">
+<meta property="og:url" content="http://127.0.0.1/2017/10/19/机器学习/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-19T10:15:22.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 机器学习 | blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Just for fun</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+      
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              机器学习
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2017-10-19T17:42:54+08:00" content="2017-10-19">
+            2017-10-19
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</div><div class="line">监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</div><div class="line">训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</div></pre></td></tr></table></figure>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</div></pre></td></tr></table></figure>
+<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">介于监督学习与无监督学习之间</div></pre></td></tr></table></figure>
+<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</div></pre></td></tr></table></figure>
+<h1 id="机器学习知识储备"><a href="#机器学习知识储备" class="headerlink" title="机器学习知识储备"></a>机器学习知识储备</h1><p>从数学层面推导最经典的机器学习算法，以及每种算法的示例和代码实现（Python）、如何做算法的参数调试、以实际应用案例分析各种算法的选择等。</p>
+<h2 id="机器学习的数学基础1-数学分析"><a href="#机器学习的数学基础1-数学分析" class="headerlink" title="机器学习的数学基础1 - 数学分析"></a>机器学习的数学基础1 - 数学分析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">机器学习的一般方法和横向比较</div><div class="line">数学是有用的：以SVD为例</div><div class="line">机器学习的角度看数学</div><div class="line">复习数学分析</div><div class="line">直观解释常数e</div><div class="line">导数/梯度</div><div class="line">随机梯度下降</div><div class="line">Taylor展式的落地应用</div><div class="line">gini系数</div><div class="line">凸函数</div><div class="line">Jensen不等式</div><div class="line">组合数与信息熵的关系</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础2-概率论与贝叶斯先验"><a href="#机器学习的数学基础2-概率论与贝叶斯先验" class="headerlink" title="机器学习的数学基础2 - 概率论与贝叶斯先验"></a>机器学习的数学基础2 - 概率论与贝叶斯先验</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">概率论基础</div><div class="line">古典概型</div><div class="line">贝叶斯公式</div><div class="line">先验分布/后验分布/共轭分布</div><div class="line">常见概率分布</div><div class="line">泊松分布和指数分布的物理意义</div><div class="line">协方差(矩阵)和相关系数</div><div class="line">独立和不相关</div><div class="line">大数定律和中心极限定理的实践意义</div><div class="line">深刻理解最大似然估计MLE和最大后验估计MAP</div><div class="line">过拟合的数学原理与解决方案</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础3-矩阵和线性代数"><a href="#机器学习的数学基础3-矩阵和线性代数" class="headerlink" title="机器学习的数学基础3 - 矩阵和线性代数"></a>机器学习的数学基础3 - 矩阵和线性代数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">线性代数在数学科学中的地位</div><div class="line">马尔科夫模型</div><div class="line">矩阵乘法的直观表达</div><div class="line">状态转移矩阵</div><div class="line">矩阵和向量组</div><div class="line">特征向量的思考和实践计算</div><div class="line">QR分解</div><div class="line">对称阵、正交阵、正定阵</div><div class="line">数据白化及其应用</div><div class="line">向量对向量求导</div><div class="line">标量对向量求导</div><div class="line">标量对矩阵求导</div></pre></td></tr></table></figure>
+<h2 id="机器学习的数学基础4-数理统计与参数估计"><a href="#机器学习的数学基础4-数理统计与参数估计" class="headerlink" title="机器学习的数学基础4 - 数理统计与参数估计"></a>机器学习的数学基础4 - 数理统计与参数估计</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">统计量</div><div class="line">期望/方差/偏度/峰度</div><div class="line">中心矩/原点矩</div><div class="line">矩估计</div><div class="line">深刻理解最大似然估计</div><div class="line">过拟合的数学原理与解决方案</div><div class="line">最大后验估计MAP</div><div class="line">偏差方差二难</div></pre></td></tr></table></figure>
+<h2 id="Python基础1-Python及其数学库"><a href="#Python基础1-Python及其数学库" class="headerlink" title="Python基础1 - Python及其数学库"></a>Python基础1 - Python及其数学库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">解释器Python2.7与IDE：Anaconda/Pycharm</div><div class="line">Python基础：列表/元组/字典/类/文件</div><div class="line">Taylor展式的代码实现</div><div class="line">numpy/scipy/matplotlib/panda的介绍和典型使用</div><div class="line">多元高斯分布</div><div class="line">泊松分布、幂律分布</div><div class="line">典型图像处理</div></pre></td></tr></table></figure>
+<h2 id="Python基础2-机器学习库"><a href="#Python基础2-机器学习库" class="headerlink" title="Python基础2 - 机器学习库"></a>Python基础2 - 机器学习库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">scikit-learn的介绍和典型使用</div><div class="line">损失函数的绘制</div><div class="line">多种数学曲线</div><div class="line">多项式拟合</div><div class="line">快速傅里叶变换FFT</div><div class="line">奇异值分解SVD</div><div class="line">Soble/Prewitt/Laplacian算子与卷积网络</div><div class="line">卷积与(指数)移动平均线</div><div class="line">股票数据分析</div></pre></td></tr></table></figure>
+<h2 id="Python基础3-数据清洗和特征选择"><a href="#Python基础3-数据清洗和特征选择" class="headerlink" title="Python基础3 - 数据清洗和特征选择"></a>Python基础3 - 数据清洗和特征选择</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">实际生产问题中算法和特征的关系</div><div class="line">股票数据的特征提取和应用</div><div class="line">一致性检验</div><div class="line">缺失数据的处理</div><div class="line">环境数据异常检测和分析</div><div class="line">模糊数据查询和数据校正方法、算法、应用</div></pre></td></tr></table></figure>
+<h2 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">线性回归</div><div class="line">Logistic/Softmax回归</div><div class="line">广义线性回归</div><div class="line">L1/L2正则化</div><div class="line">Ridge与LASSO</div><div class="line">Elastic Net</div><div class="line">梯度下降算法：BGD与SGD</div><div class="line">特征选择与过拟合</div><div class="line">Softmax回归的概念源头</div><div class="line">最大熵模型</div><div class="line">K-L散度</div></pre></td></tr></table></figure>
+<h2 id="回归实践"><a href="#回归实践" class="headerlink" title="回归实践"></a>回归实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">机器学习sklearn库介绍</div><div class="line">回归代码实现和调参</div><div class="line">Ridge回归/LASSO/Elastic Net</div><div class="line">Logistic/Softmax回归</div><div class="line">广告投入与销售额回归分析</div><div class="line">鸢尾花数据集的分类</div><div class="line">回归代码实现和调参</div><div class="line">交叉验证</div><div class="line">数据可视化</div></pre></td></tr></table></figure>
+<h2 id="决策树和随机森林"><a href="#决策树和随机森林" class="headerlink" title="决策树和随机森林"></a>决策树和随机森林</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">熵、联合熵、条件熵、KL散度、互信息</div><div class="line">最大似然估计与最大熵模型</div><div class="line">ID3、C4.5、CART详解</div><div class="line">决策树的正则化</div><div class="line">预剪枝和后剪枝</div><div class="line">Bagging</div><div class="line">随机森林</div><div class="line">不平衡数据集的处理</div><div class="line">利用随机森林做特征选择</div><div class="line">使用随机森林计算样本相似度</div></pre></td></tr></table></figure>
+<h2 id="随机森林实践"><a href="#随机森林实践" class="headerlink" title="随机森林实践"></a>随机森林实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">随机森林与特征选择</div><div class="line">决策树应用于回归</div><div class="line">多标记的决策树回归</div><div class="line">决策树和随机森林的可视化</div><div class="line">葡萄酒数据集的决策树/随机森林分类</div></pre></td></tr></table></figure>
+<h2 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">提升为什么有效</div><div class="line">Adaboost算法</div><div class="line">加法模型与指数损失</div><div class="line">梯度提升决策树GBDT</div><div class="line">XGBoost算法详解</div></pre></td></tr></table></figure>
+<h2 id="XGBoost实践"><a href="#XGBoost实践" class="headerlink" title="XGBoost实践"></a>XGBoost实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">自己动手实现GBDT</div><div class="line">XGBoost库介绍</div><div class="line">Taylor展式与学习算法</div><div class="line">KAGGLE简介</div><div class="line">泰坦尼克乘客存活率估计</div></pre></td></tr></table></figure>
+<h2 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">线性可分支持向量机</div><div class="line">软间隔的改进</div><div class="line">损失函数的理解</div><div class="line">核函数的原理和选择</div><div class="line">SMO算法</div><div class="line">支持向量回归SVR</div></pre></td></tr></table></figure>
+<h2 id="SVM实践"><a href="#SVM实践" class="headerlink" title="SVM实践"></a>SVM实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">libSVM代码库介绍</div><div class="line">原始数据和特征提取</div><div class="line">调用开源库函数完成SVM</div><div class="line">葡萄酒数据分类</div><div class="line">数字图像的手写体识别</div><div class="line">SVR用于时间序列曲线预测</div><div class="line">SVM、Logistic回归、随机森林三者的横向比较</div></pre></td></tr></table></figure>
+<h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">各种相似度度量及其相互关系</div><div class="line">Jaccard相似度和准确率、召回率</div><div class="line">Pearson相关系数与余弦相似度</div><div class="line">K-means与K-Medoids及变种</div><div class="line">AP算法(Sci07)/LPA算法及其应用</div><div class="line">密度聚类DBSCAN/DensityPeak(Sci14)</div><div class="line">谱聚类SC</div><div class="line">聚类评价和结果指标</div></pre></td></tr></table></figure>
+<h2 id="聚类实践"><a href="#聚类实践" class="headerlink" title="聚类实践"></a>聚类实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">K-Means++算法原理和实现</div><div class="line">向量量化VQ及图像近似</div><div class="line">并查集的实践应用</div><div class="line">密度聚类的代码实现</div><div class="line">谱聚类用于图片分割</div></pre></td></tr></table></figure>
+<h2 id="EM算法"><a href="#EM算法" class="headerlink" title="EM算法"></a>EM算法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">最大似然估计</div><div class="line">Jensen不等式</div><div class="line">朴素理解EM算法</div><div class="line">精确推导EM算法</div><div class="line">EM算法的深入理解</div><div class="line">混合高斯分布</div><div class="line">主题模型pLSA</div></pre></td></tr></table></figure>
+<h2 id="EM算法实践"><a href="#EM算法实践" class="headerlink" title="EM算法实践"></a>EM算法实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">多元高斯分布的EM实现</div><div class="line">分类结果的数据可视化</div><div class="line">EM与聚类的比较</div><div class="line">Dirichlet过程EM</div><div class="line">三维及等高线等图件的绘制</div><div class="line">主题模型pLSA与EM算法</div></pre></td></tr></table></figure>
+<h2 id="贝叶斯网络"><a href="#贝叶斯网络" class="headerlink" title="贝叶斯网络"></a>贝叶斯网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">朴素贝叶斯</div><div class="line">贝叶斯网络的表达</div><div class="line">条件概率表参数个数分析</div><div class="line">马尔科夫模型</div><div class="line">D-separation</div><div class="line">条件独立的三种类型</div><div class="line">Markov Blanket</div><div class="line">混合(离散+连续)网络：线性高斯模型</div><div class="line">Chow-Liu算法：最大权生成树MSWT</div></pre></td></tr></table></figure>
+<h2 id="朴素贝叶斯实践"><a href="#朴素贝叶斯实践" class="headerlink" title="朴素贝叶斯实践"></a>朴素贝叶斯实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> GaussianNB</div><div class="line">MultinomialNB</div><div class="line">BernoulliNB</div><div class="line">朴素贝叶斯用于鸢尾花数据</div><div class="line">朴素贝叶斯用于18000+篇新闻文本的分类</div></pre></td></tr></table></figure>
+<h2 id="主题模型LDA"><a href="#主题模型LDA" class="headerlink" title="主题模型LDA"></a>主题模型LDA</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">贝叶斯学派的模型认识</div><div class="line">共轭先验分布</div><div class="line">Dirichlet分布</div><div class="line">Laplace平滑</div><div class="line">Gibbs采样详解</div></pre></td></tr></table></figure>
+<h2 id="LDA实践"><a href="#LDA实践" class="headerlink" title="LDA实践"></a>LDA实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">网络爬虫的原理和代码实现</div><div class="line">停止词和高频词</div><div class="line">动手自己实现LDA</div><div class="line">LDA开源包的使用和过程分析</div><div class="line">Metropolis-Hastings算法</div><div class="line">MCMC</div><div class="line">LDA与word2vec的比较</div></pre></td></tr></table></figure>
+<h2 id="隐马尔科夫模型HMM"><a href="#隐马尔科夫模型HMM" class="headerlink" title="隐马尔科夫模型HMM"></a>隐马尔科夫模型HMM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">概率计算问题</div><div class="line">前向/后向算法</div><div class="line">HMM的参数学习</div><div class="line">Baum-Welch算法详解</div><div class="line">Viterbi算法详解</div><div class="line">隐马尔科夫模型的应用优劣比较</div></pre></td></tr></table></figure>
+<h2 id="HMM实践"><a href="#HMM实践" class="headerlink" title="HMM实践"></a>HMM实践</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">动手自己实现HMM用于中文分词</div><div class="line">多个语言分词开源包的使用和过程分析</div><div class="line">文件数据格式UFT-8、Unicode</div><div class="line">停止词和标点符号对分词的影响</div><div class="line">前向后向算法计算概率溢出的解决方案</div><div class="line">发现新词和分词效果分析</div><div class="line">高斯混合模型HMM</div><div class="line">GMM-HMM用于股票数据特征提取</div></pre></td></tr></table></figure>
+<h1 id="具体的机器学习算法"><a href="#具体的机器学习算法" class="headerlink" title="具体的机器学习算法"></a>具体的机器学习算法</h1><h2 id="构造间隔理论分布：聚类分析和模式识别"><a href="#构造间隔理论分布：聚类分析和模式识别" class="headerlink" title="构造间隔理论分布：聚类分析和模式识别"></a>构造间隔理论分布：聚类分析和模式识别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">人工神经网络</div><div class="line">决策树</div><div class="line">感知器</div><div class="line">支持向量机</div><div class="line">集成学习AdaBoost</div><div class="line">降维与度量学习</div><div class="line">聚类</div><div class="line">贝叶斯分类器</div></pre></td></tr></table></figure>
+<h2 id="构造条件概率：回归分析和统计分类"><a href="#构造条件概率：回归分析和统计分类" class="headerlink" title="构造条件概率：回归分析和统计分类"></a>构造条件概率：回归分析和统计分类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">高斯过程回归</div><div class="line">线性判别分析</div><div class="line">最近邻居法</div><div class="line">径向基函数核</div></pre></td></tr></table></figure>
+<h2 id="通过再生模型构造概率密度函数"><a href="#通过再生模型构造概率密度函数" class="headerlink" title="通过再生模型构造概率密度函数"></a>通过再生模型构造概率密度函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">最大期望算法</div><div class="line">概率图模型：包括贝叶斯网和Markov随机场</div><div class="line">Generative Topographic Mapping</div></pre></td></tr></table></figure>
+<h2 id="近似推断技术"><a href="#近似推断技术" class="headerlink" title="近似推断技术"></a>近似推断技术</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">马尔可夫链</div><div class="line">蒙特卡罗方法</div><div class="line">变分法</div></pre></td></tr></table></figure>
+<h2 id="最优化"><a href="#最优化" class="headerlink" title="最优化"></a>最优化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">大多数以上方法，直接或者间接使用最优化算法</div></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-learning/" rel="tag">#Machine learning</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/19/Python/" rel="prev">Python</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/19/debian-1/" rel="next">Debian Linux</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+    </div>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="wishd" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">wishd</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">记载杂事</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习分类"><span class="nav-number">1.</span> <span class="nav-text">机器学习分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">1.1.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无监督学习"><span class="nav-number">1.2.</span> <span class="nav-text">无监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半监督学习"><span class="nav-number">1.3.</span> <span class="nav-text">半监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增强学习"><span class="nav-number">1.4.</span> <span class="nav-text">增强学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习知识储备"><span class="nav-number">2.</span> <span class="nav-text">机器学习知识储备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的数学基础1-数学分析"><span class="nav-number">2.1.</span> <span class="nav-text">机器学习的数学基础1 - 数学分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的数学基础2-概率论与贝叶斯先验"><span class="nav-number">2.2.</span> <span class="nav-text">机器学习的数学基础2 - 概率论与贝叶斯先验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的数学基础3-矩阵和线性代数"><span class="nav-number">2.3.</span> <span class="nav-text">机器学习的数学基础3 - 矩阵和线性代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的数学基础4-数理统计与参数估计"><span class="nav-number">2.4.</span> <span class="nav-text">机器学习的数学基础4 - 数理统计与参数估计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础1-Python及其数学库"><span class="nav-number">2.5.</span> <span class="nav-text">Python基础1 - Python及其数学库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础2-机器学习库"><span class="nav-number">2.6.</span> <span class="nav-text">Python基础2 - 机器学习库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础3-数据清洗和特征选择"><span class="nav-number">2.7.</span> <span class="nav-text">Python基础3 - 数据清洗和特征选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回归"><span class="nav-number">2.8.</span> <span class="nav-text">回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回归实践"><span class="nav-number">2.9.</span> <span class="nav-text">回归实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树和随机森林"><span class="nav-number">2.10.</span> <span class="nav-text">决策树和随机森林</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林实践"><span class="nav-number">2.11.</span> <span class="nav-text">随机森林实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提升"><span class="nav-number">2.12.</span> <span class="nav-text">提升</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XGBoost实践"><span class="nav-number">2.13.</span> <span class="nav-text">XGBoost实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVM"><span class="nav-number">2.14.</span> <span class="nav-text">SVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVM实践"><span class="nav-number">2.15.</span> <span class="nav-text">SVM实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚类"><span class="nav-number">2.16.</span> <span class="nav-text">聚类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚类实践"><span class="nav-number">2.17.</span> <span class="nav-text">聚类实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EM算法"><span class="nav-number">2.18.</span> <span class="nav-text">EM算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EM算法实践"><span class="nav-number">2.19.</span> <span class="nav-text">EM算法实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯网络"><span class="nav-number">2.20.</span> <span class="nav-text">贝叶斯网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朴素贝叶斯实践"><span class="nav-number">2.21.</span> <span class="nav-text">朴素贝叶斯实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题模型LDA"><span class="nav-number">2.22.</span> <span class="nav-text">主题模型LDA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LDA实践"><span class="nav-number">2.23.</span> <span class="nav-text">LDA实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐马尔科夫模型HMM"><span class="nav-number">2.24.</span> <span class="nav-text">隐马尔科夫模型HMM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HMM实践"><span class="nav-number">2.25.</span> <span class="nav-text">HMM实践</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体的机器学习算法"><span class="nav-number">3.</span> <span class="nav-text">具体的机器学习算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造间隔理论分布：聚类分析和模式识别"><span class="nav-number">3.1.</span> <span class="nav-text">构造间隔理论分布：聚类分析和模式识别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造条件概率：回归分析和统计分类"><span class="nav-number">3.2.</span> <span class="nav-text">构造条件概率：回归分析和统计分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过再生模型构造概率密度函数"><span class="nav-number">3.3.</span> <span class="nav-text">通过再生模型构造概率密度函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#近似推断技术"><span class="nav-number">3.4.</span> <span class="nav-text">近似推断技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最优化"><span class="nav-number">3.5.</span> <span class="nav-text">最优化</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wishd
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
