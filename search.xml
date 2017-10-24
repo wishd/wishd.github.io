@@ -3,9 +3,366 @@
   
     
     <entry>
+      <title><![CDATA[常见HTTP/FTP/WebSocket错误代码大全]]></title>
+      <url>/2017/10/24/%E5%B8%B8%E8%A7%81HTTP-FTP-WebSocket%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<p><a href="https://github.com/jaywcjlove/handbook/blob/master/other/HTTP-Status-codes.md#5xx%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF" target="_blank" rel="external">来源</a></p>
+<ul>
+<li><a href="#http">HTTP</a><ul>
+<li><a href="#1xx消息">1xx消息</a></li>
+<li><a href="#2xx成功">2xx成功</a></li>
+<li><a href="#3xx重定向">3xx重定向</a></li>
+<li><a href="#4xx客户端错误">4xx客户端错误</a></li>
+<li><a href="#5xx服务器错误">5xx服务器错误</a></li>
+</ul>
+</li>
+<li><a href="#ftp">FTP</a><ul>
+<li><a href="#1xx初步">1xx初步</a></li>
+<li><a href="#2xx完成">2xx完成</a></li>
+<li><a href="#3xx中间">3xx中间</a></li>
+<li><a href="#4xx瞬态否定">4xx瞬态否定</a></li>
+</ul>
+</li>
+<li><a href="#5xx永久性否定">5xx永久性否定</a></li>
+<li><a href="#6xx受保护">6xx受保护</a></li>
+<li><a href="#websockets状态码">WebSockets状态码</a></li>
+<li><a href="#参考资料">参考资料</a></li>
+</ul>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="1xx消息"><a href="#1xx消息" class="headerlink" title="1xx消息"></a>1xx消息</h3><p><em>这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。</em></p>
+<ul>
+<li>100 - 客户端应当继续发送请求</li>
+<li>101 - 切换协议</li>
+<li>102 - 处理将被继续执行</li>
+</ul>
+<h3 id="2xx成功"><a href="#2xx成功" class="headerlink" title="2xx成功"></a>2xx成功</h3><p><em>这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。</em></p>
+<ul>
+<li>200 - （成功）请求已成功，请求所希望的响应头或数据体将随此响应返回。</li>
+<li>201 - （已创建）请求成功且服务器已创建了新的资源。。</li>
+<li>202 - （已接受）服务器已接受了请求，但尚未对其进行处理。</li>
+<li>203 - （非授权信息）服务器已成功处理了请求，但返回了可能来自另一来源的信息。</li>
+<li>204 - （无内容）服务器成功处理了请求，但未返回任何内容。</li>
+<li>205 - （重置内容）服务器成功处理了请求，但未返回任何内容。</li>
+<li>206 - （部分内容）服务器成功处理了部分 GET 请求。</li>
+</ul>
+<h3 id="3xx重定向"><a href="#3xx重定向" class="headerlink" title="3xx重定向"></a>3xx重定向</h3><p><em>这类状态码代表需要客户端采取进一步的操作才能完成请求。通常，这些状态码用来重定向，后续的请求地址（重定向目标）在本次响应的Location域中指明。按照HTTP/1.0版规范的建议，浏览器不应自动访问超过5次的重定向。对重定向一般是由浏览器来控制重定向的次数，重定向会导致客户端不必要的资源消耗</em></p>
+<ul>
+<li>300 - 多重选择，被请求的资源有一系列可供选择的回馈信息。</li>
+<li>301 - 永久移除，被请求的资源已永久移动到新位置。</li>
+<li>302 - 临时移动，请求的资源现在临时从不同的URI响应请求。</li>
+<li>303 - 查看其他位置，对应当前请求的响应可以在另一个URI上被找到，而且客户端应当采用GET的方式访问那个资源。</li>
+<li>304 - 未修改。自从上次请求后，请求的网页未被修改过。服务器返回此响应时，不会返回网页内容。</li>
+<li>305 - 使用代理，被请求的资源必须通过指定的代理才能被访问。</li>
+<li><del>306</del> - 临时重定向，在最新版的规范中，306状态码已经不再被使用。</li>
+<li>307 - 临时重定向。</li>
+</ul>
+<h3 id="4xx客户端错误"><a href="#4xx客户端错误" class="headerlink" title="4xx客户端错误"></a>4xx客户端错误</h3><p><em>这类的状态码代表了客户端看起来可能发生了错误，妨碍了服务器的处理。</em></p>
+<ul>
+<li>400 - 错误的请求。</li>
+<li>401 - 访问被拒绝。</li>
+<li>402 - 付款要求。</li>
+<li>403 - 禁止访问<ul>
+<li>403.1 - 执行访问被禁止。</li>
+<li>403.2 - 读访问被禁止。</li>
+<li>403.3 - 写访问被禁止。</li>
+<li>403.4 - 要求 SSL。</li>
+<li>403.5 - 要求 SSL 128。</li>
+<li>403.6 - IP 地址被拒绝。</li>
+<li>403.7 - 要求客户端证书。</li>
+<li>403.8 - 站点访问被拒绝。</li>
+<li>403.9 - 用户数过多。</li>
+<li>403.10 - 配置无效。</li>
+<li>403.11 - 密码更改。</li>
+<li>403.12 - 拒绝访问映射表。</li>
+<li>403.13 - 客户端证书被吊销。</li>
+<li>403.14 - 拒绝目录列表。</li>
+<li>403.15 - 超出客户端访问许可。</li>
+<li>403.16 - 客户端证书不受信任或无效。</li>
+<li>403.17 - 客户端证书已过期或尚未生效。</li>
+<li>403.18 - 在当前的应用程序池中不能执行所请求的 URL。</li>
+<li>403.19 - 不能为这个应用程序池中的客户端执行 CGI。</li>
+<li>403.20 - Passport 登录失败。</li>
+</ul>
+</li>
+<li>404 - 未找到。<ul>
+<li>404.0 -（无） – 没有找到文件或目录。</li>
+<li>404.1 - 无法在所请求的端口上访问 Web 站点。</li>
+<li>404.2 - Web 服务扩展锁定策略阻止本请求。</li>
+<li>404.3 - MIME 映射策略阻止本请求。</li>
+</ul>
+</li>
+<li>405 - 用来访问本页面的 HTTP 谓词不被允许（方法不被允许）</li>
+<li>406 - 客户端浏览器不接受所请求页面的 MIME 类型。</li>
+<li>407 - 要求进行代理身份验证。</li>
+<li>408 - 请求超时。</li>
+<li>409 - 由于和被请求的资源的当前状态之间存在冲突，请求无法完成。</li>
+<li>410 - 被请求的资源在服务器上已经不再可用，而且没有任何已知的转发地址。</li>
+<li>411 - 服务器拒绝在没有定义Content-Length头的情况下接受请求。</li>
+<li>412 - 前提条件失败。</li>
+<li>413 – 请求实体太大。</li>
+<li>414 - 请求 URI 太长。</li>
+<li>415 – 不支持的媒体类型。</li>
+<li>416 – 所请求的范围无法满足。</li>
+<li>417 – 执行失败。</li>
+<li>418 – 本操作码是在1998年作为IETF的传统<a href="http://www.baike.com/wiki/%E6%81%B6%E6%90%9ERFC" target="_blank" rel="external">愚人节笑话</a>。</li>
+<li>421 – 从当前客户端所在的IP地址到服务器的连接数超过了服务器许可的最大范围。</li>
+<li>422 – 请求格式正确，但是由于含有语义错误，无法响应。</li>
+<li>423 – 当前资源被锁定。</li>
+<li>424 – 由于之前的某个请求发生的错误，导致当前请求失败。</li>
+<li>425 – 无序的集合。</li>
+<li>426 – 客户端应当切换到TLS/1.0。</li>
+<li>451 – （由IETF在2015核准后新增加）该访问因法律的要求而被拒绝。</li>
+</ul>
+<h3 id="5xx服务器错误"><a href="#5xx服务器错误" class="headerlink" title="5xx服务器错误"></a>5xx服务器错误</h3><p><em>这类状态码代表了服务器在处理请求的过程中有错误或者异常状态发生，也有可能是服务器意识到以当前的软硬件资源无法完成对请求的处理。</em></p>
+<ul>
+<li>500 - 内部服务器错误。</li>
+<li>501 - 尚未实施，页眉值指定了未实现的配置。</li>
+<li>502 - 错误网关，Web 服务器用作网关或代理服务器时收到了无效响应。 </li>
+<li>503 - 服务不可用，这个错误代码为 IIS 6.0 所专用。</li>
+<li>504 - 网关超时，服务器作为网关或代理，未及时从上游服务器接收请求。</li>
+<li>505 - HTTP 版本不受支持，服务器不支持请求中所使用的 HTTP 协议版本。</li>
+<li>506 - 服务器没有正确配置。</li>
+<li>507 - 存储空间不足。服务器无法存储完成请求所必须的内容。这个状况被认为是临时的。</li>
+<li>509 - 带宽超过限制。这不是一个官方的状态码，但是仍被广泛使用。</li>
+<li>510 - 没有扩展，获取资源所需要的策略并没有被满足。</li>
+</ul>
+<h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><h3 id="1xx初步"><a href="#1xx初步" class="headerlink" title="1xx初步"></a>1xx初步</h3><p><em>肯定的初步答复，这些状态代码指示一项操作已经成功开始，但客户端希望在继续操作新命令前得到另一个答复。</em></p>
+<ul>
+<li>110 重新启动标记答复。</li>
+<li>120 服务已就绪，在 nnn 分钟后开始。</li>
+<li>125 数据连接已打开，正在开始传输。</li>
+<li>150 文件状态正常，准备打开数据连接。</li>
+</ul>
+<h3 id="2xx完成"><a href="#2xx完成" class="headerlink" title="2xx完成"></a>2xx完成</h3><p><em>肯定的完成答复，一项操作已经成功完成。客户端可以执行新命令。</em></p>
+<ul>
+<li>200 命令确定。</li>
+<li>202 未执行命令，站点上的命令过多。</li>
+<li>211 系统状态，或系统帮助答复。</li>
+<li>212 目录状态。</li>
+<li>213 文件状态。</li>
+<li>214 帮助消息。</li>
+<li>215 NAME 系统类型，其中，NAME 是 Assigned Numbers 文档中所列的正式系统名称。</li>
+<li>220 服务就绪，可以执行新用户的请求。</li>
+<li>221 服务关闭控制连接。如果适当，请注销。</li>
+<li>225 数据连接打开，没有进行中的传输。</li>
+<li>226 关闭数据连接。请求的文件操作已成功（例如，传输文件或放弃文件）。</li>
+<li>227 进入被动模式 (h1,h2,h3,h4,p1,p2)。</li>
+<li>230 用户已登录，继续进行。</li>
+<li>250 请求的文件操作正确，已完成。</li>
+<li>257 已创建“PATHNAME”。</li>
+</ul>
+<h3 id="3xx中间"><a href="#3xx中间" class="headerlink" title="3xx中间"></a>3xx中间</h3><p><em>肯定的中间答复，该命令已成功，但服务器需要更多来自客户端的信息以完成对请求的处理。</em></p>
+<ul>
+<li>331 用户名正确，需要密码。</li>
+<li>332 需要登录帐户。</li>
+<li>350 请求的文件操作正在等待进一步的信息。</li>
+</ul>
+<h3 id="4xx瞬态否定"><a href="#4xx瞬态否定" class="headerlink" title="4xx瞬态否定"></a>4xx瞬态否定</h3><p><em>瞬态否定的完成答复，该命令不成功，但错误是暂时的。如果客户端重试命令，可能会执行成功。</em></p>
+<ul>
+<li>421 服务不可用，正在关闭控制连接。如果服务确定它必须关闭，将向任何命令发送这一应答。</li>
+<li>425 无法打开数据连接。</li>
+<li>426 Connection closed; transfer aborted.</li>
+<li>450 未执行请求的文件操作。文件不可用（例如，文件繁忙）。</li>
+<li>451 请求的操作异常终止：正在处理本地错误。</li>
+<li>452 未执行请求的操作。系统存储空间不够。</li>
+</ul>
+<h2 id="5xx永久性否定"><a href="#5xx永久性否定" class="headerlink" title="5xx永久性否定"></a>5xx永久性否定</h2><p><em>永久性否定的完成答复，该命令不成功，错误是永久性的。如果客户端重试命令，将再次出现同样的错误。</em></p>
+<ul>
+<li>500 语法错误，命令无法识别。这可能包括诸如命令行太长之类的错误。</li>
+<li>501 在参数中有语法错误。</li>
+<li>502 未执行命令。</li>
+<li>503 错误的命令序列。</li>
+<li>504 未执行该参数的命令。</li>
+<li>530 未登录。</li>
+<li>532 存储文件需要帐户。</li>
+<li>550 未执行请求的操作。文件不可用（例如，未找到文件，没有访问权限）。</li>
+<li>551 请求的操作异常终止：未知的页面类型。</li>
+<li>552 请求的文件操作异常终止：超出存储分配（对于当前目录或数据集）。</li>
+<li>553 未执行请求的操作。不允许的文件名。</li>
+</ul>
+<h2 id="6xx受保护"><a href="#6xx受保护" class="headerlink" title="6xx受保护"></a>6xx受保护</h2><ul>
+<li>600 Series，Replies regarding confidentiality and integrity</li>
+<li>631 Integrity protected reply.</li>
+<li>632 Confidentiality and integrity protected reply.</li>
+<li>633 Confidentiality protected reply.</li>
+</ul>
+<h2 id="WebSockets状态码"><a href="#WebSockets状态码" class="headerlink" title="WebSockets状态码"></a>WebSockets状态码</h2><p><em>WebSockets 的CloseEvent 会在连接关闭时发送给使用 WebSockets 的客户端。它在 WebSocket 对象的 onclose 事件监听器中使用。服务端发送的关闭码，以下为已分配的状态码。</em></p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–999</td>
+<td>-</td>
+<td>保留段, 未使用。</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>CLOSE_NORMAL</td>
+<td>正常关闭; 无论为何目的而创建, 该链接都已成功完成任务。</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>CLOSE_GOING_AWAY</td>
+<td>终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开。</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>CLOSE_PROTOCOL_ERROR</td>
+<td>由于协议错误而中断连接。</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>CLOSE_UNSUPPORTED</td>
+<td>由于接收到不允许的数据类型而断开连接 (如仅接收文本数据的终端接收到了二进制数据)。</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>-</td>
+<td>保留。 其意义可能会在未来定义。</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>CLOSE_NO_STATUS</td>
+<td>保留。  表示没有收到预期的状态码。</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>CLOSE_ABNORMAL</td>
+<td>保留。 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧)。</td>
+</tr>
+<tr>
+<td>1007</td>
+<td>Unsupported Data</td>
+<td>由于收到了格式不符的数据而断开连接 (如文本消息中包含了非 UTF-8 数据)。</td>
+</tr>
+<tr>
+<td>1008</td>
+<td>Policy Violation</td>
+<td>由于收到不符合约定的数据而断开连接。 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景。</td>
+</tr>
+<tr>
+<td>1009</td>
+<td>CLOSE_TOO_LARGE</td>
+<td>由于收到过大的数据帧而断开连接。</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>Missing Extension</td>
+<td>客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接。</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>Internal Error</td>
+<td>客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接。</td>
+</tr>
+<tr>
+<td>1012</td>
+<td>Service Restart</td>
+<td>服务器由于重启而断开连接。 [Ref]</td>
+</tr>
+<tr>
+<td>1013</td>
+<td>Try Again Later</td>
+<td>服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接。 [Ref]</td>
+</tr>
+<tr>
+<td>1014</td>
+<td>-</td>
+<td>由 WebSocket 标准保留以便未来使用。</td>
+</tr>
+<tr>
+<td>1015</td>
+<td>TLS Handshake</td>
+<td>保留。 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书)。</td>
+</tr>
+<tr>
+<td>1016–1999</td>
+<td>-</td>
+<td>由 WebSocket 标准保留以便未来使用。</td>
+</tr>
+<tr>
+<td>2000–2999</td>
+<td>-</td>
+<td>由 WebSocket 拓展保留使用。</td>
+</tr>
+<tr>
+<td>3000–3999</td>
+<td>-</td>
+<td>可以由库或框架使用。 不应由应用使用。 可以在 IANA 注册, 先到先得。</td>
+</tr>
+<tr>
+<td>4000–4999</td>
+<td>-</td>
+<td>可以由应用使用。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank" rel="external">HTTP状态码列表</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_FTP_server_return_codes" target="_blank" rel="external">FTP状态码列表</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CloseEvent" target="_blank" rel="external">MDN CloseEvent</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP_404#Custom_error_pages" target="_blank" rel="external">HTTP 404</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_FTP_server_return_codes" target="_blank" rel="external">List of FTP server return codes</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview" target="_blank" rel="external">HTTP概述</a></li>
+<li><a href="http://www.getnetgoing.com/HTTP-403.html" target="_blank" rel="external">Help for HTTP error 403: “Forbidden”</a></li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[栈]]></title>
+      <url>/2017/10/24/%E6%A0%88/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<p>称为栈或堆叠，是计算机科学中一种特殊的串列形式的抽象资料型别，其特殊之处在于只能允许在链接串列或阵列的一端（称为堆叠顶端指标，英语：top）进行加入数据（英语：push）和输出数据（英语：pop）的运算。另外栈也可以用一维数组或连结串列的形式来完成。堆叠的另外一个相对的操作方式称为伫列。<br>由于堆叠数据结构只允许在一端进行操作，因而按照后进先出（LIFO, Last In First Out）的原理运作</p>
+<p>栈的基本特点</p>
+<ul>
+<li>先入后出，后入先出。</li>
+<li>除头尾节点之外，每个元素有一个前驱，一个后继。<h1 id="顺序栈C-实现"><a href="#顺序栈C-实现" class="headerlink" title="顺序栈C++实现"></a>顺序栈C++实现</h1><h2 id="MyStack-h"><a href="#MyStack-h" class="headerlink" title="MyStack.h"></a>MyStack.h</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> STACK_MYSTACK_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_MYSTACK_H</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span></span></div><div class="line"><span class="class">&#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">MyStack</span><span class="params">(<span class="keyword">int</span> size)</span></span>;             <span class="comment">//初始化栈</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Destroy_MyStack</span><span class="params">()</span></span>;                 <span class="comment">//清除栈</span></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Stack_Empty</span><span class="params">()</span></span>;                     <span class="comment">//判空</span></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Stack_Full</span><span class="params">()</span></span>;                      <span class="comment">//判满</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Clear_Stack</span><span class="params">()</span></span>;                     <span class="comment">//清空栈</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Stack_Length</span><span class="params">()</span></span>;                     <span class="comment">//返回长度</span></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Push</span><span class="params">(<span class="keyword">int</span> elem)</span></span>;                    <span class="comment">//push</span></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Pop</span><span class="params">(<span class="keyword">int</span> &amp;elem)</span></span>;                    <span class="comment">//pop</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Stack_Traverse</span><span class="params">(<span class="keyword">bool</span> Button)</span></span>;       <span class="comment">//遍历栈</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Get_Top</span><span class="params">(<span class="keyword">int</span> &amp;elem)</span></span>;                 <span class="comment">//获取栈顶元素</span></div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> *m_pBuffer;</div><div class="line">    <span class="keyword">int</span> m_Size;</div><div class="line">    <span class="keyword">int</span> m_Top;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//STACK_MYSTACK_H</span></span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="MyStack-cpp"><a href="#MyStack-cpp" class="headerlink" title="MyStack.cpp"></a>MyStack.cpp</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"MyStack.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line">MyStack::MyStack(<span class="keyword">int</span> size) &#123;</div><div class="line">    m_Size = size;</div><div class="line">    m_pBuffer = <span class="keyword">new</span> <span class="keyword">int</span>[m_Size];</div><div class="line">    m_Top = <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> MyStack::Destroy_MyStack() &#123;</div><div class="line">    <span class="keyword">delete</span> []m_pBuffer;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> MyStack::Stack_Empty() &#123;</div><div class="line">    <span class="keyword">return</span> !m_Top;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> MyStack::Stack_Full() &#123;</div><div class="line">    <span class="keyword">return</span> (m_Top == m_Size) != <span class="number">0</span>;</div><div class="line">    <span class="comment">// return (m_Top == m_Size) ? true : false;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> MyStack::Clear_Stack() &#123;</div><div class="line">    m_Top = <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> MyStack::Stack_Length() &#123;</div><div class="line">    <span class="keyword">return</span> m_Top;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> MyStack::Push(<span class="keyword">int</span> elem) &#123;</div><div class="line">    <span class="keyword">if</span>(Stack_Full())&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        m_pBuffer[m_Top] = elem;</div><div class="line">        m_Top++;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> MyStack::Pop(<span class="keyword">int</span> &amp;elem) &#123;</div><div class="line">    <span class="keyword">if</span>(Stack_Empty())&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        m_Top--;</div><div class="line">        elem = m_pBuffer[m_Top];</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> MyStack::Stack_Traverse(<span class="keyword">bool</span> Button) &#123;</div><div class="line">    <span class="keyword">if</span>(Button)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i= <span class="number">0</span>; i &lt; m_Top; i++) &#123;</div><div class="line">            <span class="built_in">cout</span> &lt;&lt; m_pBuffer[i] &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = m_Top<span class="number">-1</span>; i &gt;=<span class="number">0</span> ; i--) &#123;</div><div class="line">            <span class="built_in">cout</span> &lt;&lt; m_pBuffer[i] &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> MyStack::Get_Top(<span class="keyword">int</span> &amp;elem) &#123;</div><div class="line">    elem = m_pBuffer[m_Top<span class="number">-1</span>];</div><div class="line">    <span class="keyword">return</span> elem;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"MyStack.h"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> B 2</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> O 8</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> H 16</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 初始化操作</span></div><div class="line">    <span class="keyword">auto</span> *pStack = <span class="keyword">new</span> MyStack(<span class="number">3</span>);</div><div class="line"></div><div class="line">    <span class="comment">//栈判空</span></div><div class="line">    <span class="keyword">if</span>(pStack-&gt;Stack_Empty())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 入栈</span></div><div class="line">    pStack-&gt;Push(<span class="number">1</span>);</div><div class="line">    pStack-&gt;Push(<span class="number">2</span>);</div><div class="line">    pStack-&gt;Push(<span class="number">3</span>);</div><div class="line"></div><div class="line">    <span class="comment">//遍历栈</span></div><div class="line">    pStack-&gt;Stack_Traverse(<span class="literal">false</span>);</div><div class="line"></div><div class="line">    <span class="comment">//栈判满</span></div><div class="line">    <span class="keyword">if</span>(pStack-&gt;Stack_Full())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈满"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// 取栈顶元素</span></div><div class="line">    <span class="keyword">int</span> top = <span class="number">0</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈顶元素: "</span> &lt;&lt; pStack-&gt;Get_Top(top) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="comment">//出栈</span></div><div class="line">    <span class="keyword">int</span> elem = <span class="number">0</span>;</div><div class="line">    pStack-&gt;Pop(elem);</div><div class="line">    pStack-&gt;Stack_Traverse(<span class="literal">false</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 取栈顶元素</span></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈顶元素: "</span> &lt;&lt; pStack-&gt;Get_Top(top) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="comment">//栈判空</span></div><div class="line">    <span class="keyword">if</span>(pStack-&gt;Stack_Empty())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">栈空</div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">1</span></div><div class="line">栈满</div><div class="line">栈顶元素: <span class="number">3</span></div><div class="line"><span class="number">2</span></div><div class="line"><span class="number">1</span></div><div class="line">栈顶元素: <span class="number">2</span></div></pre></td></tr></table></figure>
+<h1 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h1><h2 id="进制转换-10-gt-2"><a href="#进制转换-10-gt-2" class="headerlink" title="进制转换 10-&gt;2"></a>进制转换 10-&gt;2</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"MyStack.h"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> B 2</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> O 8</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> H 16</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">auto</span> *pStack = <span class="keyword">new</span> MyStack(<span class="number">32</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 转换的数N</span></div><div class="line">    <span class="keyword">int</span> N = <span class="number">2017</span>;</div><div class="line">    <span class="keyword">int</span> mod = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="comment">// 短除法</span></div><div class="line">    <span class="keyword">while</span> (N !=<span class="number">0</span>)&#123;</div><div class="line">        mod = N % B;</div><div class="line">        pStack-&gt;Push(mod);</div><div class="line">        N = N / B;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> elem = <span class="number">0</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; pStack-&gt;Get_Top(elem) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    pStack-&gt;Stack_Traverse(<span class="literal">false</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div></pre></td></tr></table></figure>
+<h1 id="源码文件"><a href="#源码文件" class="headerlink" title="源码文件"></a>源码文件</h1><p><a href="/sources/stack.zip">zip</a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Language </tag>
+            
+            <tag> C++ </tag>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[单向链表]]></title>
       <url>/2017/10/24/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/</url>
       <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<p>一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针(Pointer)。由于不必须按顺序存储，链表在插入的时候可以达到O(1)的复杂度，比另一种线性表顺序表快得多，但是查找一个节点或者访问特定编号的节点则需要O(n)的时间，而顺序表相应的时间复杂度分别是O(logn)和O(1)。<br>使用链表结构可以克服数组链表需要预先知道数据大小的缺点，链表结构可以充分利用计算机内存空间，实现灵活的内存动态管理。但是链表失去了数组随机读取的优点，同时链表由于增加了结点的指针域，空间开销比较大。</p>
 <h2 id="单向链表C-实现"><a href="#单向链表C-实现" class="headerlink" title="单向链表C++实现"></a>单向链表C++实现</h2><p>C++ 实现代码如下</p>
 <h3 id="Node-h"><a href="#Node-h" class="headerlink" title="Node.h"></a>Node.h</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> LINKED_LIST_NODE_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> LINKED_LIST_NODE_H</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span></div><div class="line"><span class="class">&#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    Node(<span class="keyword">int</span> data=<span class="number">0</span>);</div><div class="line">    <span class="keyword">int</span> Data;</div><div class="line">    Node *p_Next;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//LINKED_LIST_NODE_H</span></span></div></pre></td></tr></table></figure>
 <h3 id="Node-cpp"><a href="#Node-cpp" class="headerlink" title="Node.cpp"></a>Node.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Node.h"</span></span></div><div class="line"></div><div class="line">Node::Node(<span class="keyword">int</span> data)</div><div class="line">&#123;</div><div class="line">    Data=data;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -13,6 +370,7 @@
 <h3 id="List-cpp"><a href="#List-cpp" class="headerlink" title="List.cpp"></a>List.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"List.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line">List::List(<span class="keyword">void</span>)</div><div class="line">&#123;</div><div class="line">    p_Head = <span class="keyword">new</span> Node();</div><div class="line">    <span class="keyword">if</span> ( <span class="literal">NULL</span> == p_Head)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Memory failed!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    p_Head-&gt;p_Next=<span class="literal">NULL</span>;</div><div class="line">    m_iLength =<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> List::Clear_List()</div><div class="line">&#123;</div><div class="line">    Node *tempNode = p_Head-&gt;p_Next;</div><div class="line">    Node *newNode = p_Head-&gt;p_Next;</div><div class="line">    <span class="keyword">while</span> ( <span class="literal">NULL</span> != tempNode)</div><div class="line">    &#123;</div><div class="line">        newNode = tempNode-&gt;p_Next;</div><div class="line">        <span class="keyword">delete</span> tempNode;</div><div class="line">        tempNode = newNode;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    p_Head-&gt;p_Next=<span class="literal">NULL</span>;</div><div class="line">    m_iLength=<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">List::~List(<span class="keyword">void</span>)</div><div class="line">&#123;</div><div class="line">    Clear_List();</div><div class="line">    <span class="keyword">delete</span> p_Head;</div><div class="line">    p_Head=<span class="literal">NULL</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_Empty()</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> ( <span class="number">0</span> == m_iLength )</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> List::List_Length()</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> m_iLength;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_GetElem(<span class="keyword">int</span> seat,Node *Elem)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (seat &gt;= m_iLength || seat&lt;<span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    Node *tempNode = p_Head;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=seat;i++)</div><div class="line">    &#123;</div><div class="line">        tempNode = tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Elem-&gt;Data=tempNode-&gt;Data;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> List::List_Search(Node *Elem)</div><div class="line">&#123;</div><div class="line">    Node *tempNode = p_Head-&gt;p_Next;</div><div class="line">    <span class="keyword">int</span> count=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> ( <span class="literal">NULL</span> != tempNode)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> ( Elem-&gt;Data==tempNode-&gt;Data)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span> count;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        tempNode = tempNode-&gt;p_Next;</div><div class="line">        count++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_Insert_Head(Node *Elem)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//Node *tempNode =p_Head-&gt;p_Next;</span></div><div class="line">    Node *NewNode = <span class="keyword">new</span> Node();</div><div class="line">    <span class="keyword">if</span> ( <span class="literal">NULL</span> == NewNode)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    NewNode-&gt;Data = Elem-&gt;Data;</div><div class="line"></div><div class="line">    NewNode-&gt;p_Next = p_Head-&gt;p_Next;</div><div class="line">    p_Head-&gt;p_Next = NewNode;</div><div class="line">    m_iLength++;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_Insert_Tail(Node *Elem)</div><div class="line">&#123;</div><div class="line">    Node *tempNode = p_Head;</div><div class="line">    Node *NewNode = <span class="keyword">new</span> Node();</div><div class="line">    <span class="keyword">if</span> ( <span class="literal">NULL</span> == NewNode)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    NewNode-&gt;Data = Elem-&gt;Data;</div><div class="line">    <span class="keyword">while</span> ( <span class="literal">NULL</span> != tempNode-&gt;p_Next)</div><div class="line">    &#123;</div><div class="line">        tempNode = tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    tempNode-&gt;p_Next = NewNode;</div><div class="line">    NewNode-&gt;p_Next=<span class="literal">NULL</span>;</div><div class="line">    m_iLength++;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">bool</span> List::List_Insert(<span class="keyword">int</span> seat,Node *Elem)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (seat&gt;=m_iLength || <span class="number">0</span>&gt;seat)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line">    Node *NewNode = <span class="keyword">new</span> Node();</div><div class="line">    <span class="keyword">if</span> ( <span class="literal">NULL</span> == NewNode )</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    NewNode-&gt;Data=Elem-&gt;Data;</div><div class="line"></div><div class="line">    Node *tempNode = p_Head;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;seat;i++)</div><div class="line">    &#123;</div><div class="line">        tempNode=tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    NewNode-&gt;p_Next=tempNode-&gt;p_Next;</div><div class="line">    tempNode-&gt;p_Next=NewNode;</div><div class="line">    m_iLength++;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_Delete(Node *Elem)</div><div class="line">&#123;</div><div class="line">    Node *tempNode = p_Head-&gt;p_Next;</div><div class="line">    Node *priorNode = p_Head;</div><div class="line"></div><div class="line">    <span class="keyword">while</span> ( <span class="literal">NULL</span> != tempNode)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (tempNode-&gt;Data == Elem-&gt;Data)</div><div class="line">        &#123;</div><div class="line">            priorNode-&gt;p_Next=tempNode-&gt;p_Next;</div><div class="line">            <span class="keyword">delete</span> tempNode;</div><div class="line">            tempNode=<span class="literal">NULL</span>;</div><div class="line">            m_iLength--;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">        priorNode=tempNode;</div><div class="line">        tempNode=tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_PriorElem(<span class="keyword">int</span> seat,Node *Elem)</div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ( <span class="number">0</span> &gt;= seat || seat&gt;=m_iLength)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line">    Node *tempNode = p_Head;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;seat;i++)</div><div class="line">    &#123;</div><div class="line">        tempNode=tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line">    Elem-&gt;Data=tempNode-&gt;Data;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> List::List_NextElem(<span class="keyword">int</span> seat,Node *Elem)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> ( <span class="number">0</span> &gt; seat || seat&gt;=m_iLength<span class="number">-1</span>)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line">    Node *tempNode = p_Head-&gt;p_Next;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;seat;i++)</div><div class="line">    &#123;</div><div class="line">        tempNode=tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line">    Elem-&gt;Data=tempNode-&gt;p_Next-&gt;Data;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> List::List_Traverse()</div><div class="line">&#123;</div><div class="line">    Node *tempNode = p_Head-&gt;p_Next;</div><div class="line"></div><div class="line">    <span class="keyword">while</span>(<span class="literal">NULL</span> != tempNode)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; tempNode-&gt;Data &lt;&lt; <span class="string">"--&gt;"</span> ;</div><div class="line">        tempNode=tempNode-&gt;p_Next;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"List.h"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">auto</span> *<span class="built_in">list</span>=<span class="keyword">new</span> List();</div><div class="line"></div><div class="line">    <span class="function">Node <span class="title">n1</span><span class="params">(<span class="number">9</span>)</span></span>;</div><div class="line">    <span class="function">Node <span class="title">n2</span><span class="params">(<span class="number">1</span>)</span></span>;</div><div class="line">    <span class="function">Node <span class="title">n3</span><span class="params">(<span class="number">3</span>)</span></span>;</div><div class="line">    <span class="function">Node <span class="title">n4</span><span class="params">(<span class="number">5</span>)</span></span>;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Length:"</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Length() &lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">list</span>-&gt;List_Insert_Head(&amp;n1);</div><div class="line">    <span class="built_in">list</span>-&gt;List_Insert_Head(&amp;n2);</div><div class="line">    <span class="built_in">list</span>-&gt;List_Insert(<span class="number">0</span>,&amp;n3);</div><div class="line">    <span class="built_in">list</span>-&gt;List_Insert_Tail(&amp;n4);</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_Traverse();</div><div class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Length:"</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Length() &lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_GetElem(<span class="number">2</span>,&amp;n2);</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"n2:"</span>&lt;&lt;n2.Data &lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_PriorElem(<span class="number">2</span>,&amp;n2);</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"n2:"</span>&lt;&lt;n2.Data &lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_NextElem(<span class="number">2</span>,&amp;n2);</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"n2:"</span>&lt;&lt;n2.Data &lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"n4 seat:"</span> &lt;&lt;<span class="built_in">list</span>-&gt;List_Search(&amp;n4) &lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_Delete(&amp;n4);</div><div class="line"></div><div class="line">    <span class="built_in">list</span>-&gt;List_Traverse();</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">delete</span> <span class="built_in">list</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Length:<span class="number">0</span></div><div class="line"><span class="number">3</span>--&gt;<span class="number">1</span>--&gt;<span class="number">9</span>--&gt;<span class="number">5</span>--&gt;</div><div class="line">Length:<span class="number">4</span></div><div class="line">n2:<span class="number">9</span></div><div class="line">n2:<span class="number">1</span></div><div class="line">n2:<span class="number">5</span></div><div class="line">n4 seat:<span class="number">3</span></div><div class="line"><span class="number">3</span>--&gt;<span class="number">1</span>--&gt;<span class="number">9</span>--&gt;</div></pre></td></tr></table></figure>
+<h2 id="源码文件"><a href="#源码文件" class="headerlink" title="源码文件"></a>源码文件</h2><p><a href="/sources/linked_list.zip">zip</a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -42,6 +400,7 @@
 <h3 id="List-cpp"><a href="#List-cpp" class="headerlink" title="List.cpp"></a>List.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"List.h"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="comment">//初始化顺序表</span></div><div class="line">List::List(<span class="keyword">int</span> size) &#123;</div><div class="line">    m_Size = size;</div><div class="line">    data = <span class="keyword">new</span> <span class="keyword">int</span>[m_Size];</div><div class="line">    m_Length = <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//由a数组中的元素建造顺序表</span></div><div class="line"><span class="keyword">void</span> List::Create_List(<span class="keyword">int</span> *a, <span class="keyword">int</span> n) &#123;</div><div class="line">    <span class="keyword">int</span> i;</div><div class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</div><div class="line">        data[i] = a[i];</div><div class="line">    m_Length = i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//销毁顺序表</span></div><div class="line"><span class="keyword">void</span> List::Destroy_List() &#123;</div><div class="line">    <span class="keyword">delete</span>[]data;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//判空</span></div><div class="line"><span class="keyword">bool</span> List::List_Empty() &#123;</div><div class="line">    <span class="keyword">return</span> m_Length == <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//判满</span></div><div class="line"><span class="keyword">bool</span> List::List_Full() &#123;</div><div class="line">    <span class="keyword">return</span> m_Length == m_Size;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//返回长度</span></div><div class="line"><span class="keyword">int</span> List::List_Length() &#123;</div><div class="line">    <span class="keyword">return</span> m_Length;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//查找元素位置</span></div><div class="line"><span class="keyword">int</span> List::List_Search(<span class="keyword">int</span> Element) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m_Length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (Element == data[i])</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//获取i的元素</span></div><div class="line"><span class="keyword">int</span> List::Get_Elem(<span class="keyword">int</span> i)&#123;</div><div class="line">    <span class="keyword">return</span> data[i];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//插入元素</span></div><div class="line"><span class="keyword">bool</span> List::List_Insert(<span class="keyword">int</span> i, <span class="keyword">int</span> Element) &#123;</div><div class="line">    <span class="keyword">if</span> (i &lt; <span class="number">0</span> || List_Full() || i &gt; m_Length)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = m_Length; j &gt;= i; j--)</div><div class="line">            data[j] = data[j<span class="number">-1</span>];</div><div class="line">        data[i<span class="number">-1</span>] = Element;</div><div class="line">        m_Length++;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//删除元素</span></div><div class="line"><span class="keyword">bool</span> List::Delete_Elem(<span class="keyword">int</span> i) &#123;</div><div class="line">    <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt; m_Length)</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j&lt;m_Length; j++)</div><div class="line">            data[j<span class="number">-1</span>] = data[j];</div><div class="line">    &#125;</div><div class="line">    m_Length--;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//遍历顺序表</span></div><div class="line"><span class="keyword">void</span> List::List_Traverse() &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m_Length; i++)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; data[i] &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"List.h"</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">auto</span> *<span class="built_in">list</span> = <span class="keyword">new</span> List(<span class="number">5</span>);</div><div class="line">    <span class="keyword">int</span> arr[<span class="number">3</span>] = &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</div><div class="line">    <span class="built_in">list</span>-&gt;Create_List(arr,<span class="number">3</span>);</div><div class="line">    <span class="built_in">list</span>-&gt;List_Insert(<span class="number">2</span>,<span class="number">1</span>);</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"length:"</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Length() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">list</span>-&gt;Delete_Elem(<span class="number">6</span>);</div><div class="line">    <span class="built_in">list</span>-&gt;List_Traverse();</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Is_Empty ? "</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Empty() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Is_Full ? "</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Full() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"data: "</span> &lt;&lt; <span class="built_in">list</span>-&gt;Get_Elem(<span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"i: "</span> &lt;&lt; <span class="built_in">list</span>-&gt;List_Search(<span class="number">5</span>) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">list</span>-&gt;Destroy_List();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">length:<span class="number">4</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">5</span></div><div class="line">Is_Empty ? <span class="number">0</span></div><div class="line">Is_Full ? <span class="number">0</span></div><div class="line">data: <span class="number">1</span></div><div class="line">i: <span class="number">3</span></div></pre></td></tr></table></figure>
+<h2 id="源码文件"><a href="#源码文件" class="headerlink" title="源码文件"></a>源码文件</h2><p><a href="/sources/linear_list.zip">zip</a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -65,12 +424,26 @@
     <entry>
       <title><![CDATA[MySQL]]></title>
       <url>/2017/10/22/MySQL/</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<p><a href="https://github.com/mysql/mysql-server" target="_blank" rel="external">MySQL</a> 原本是一个开放源代码的关系数据库管理系统，原开发者为瑞典的MySQL AB公司，该公司于2008年被昇阳微系统（Sun Microsystems）收购。2009年，甲骨文公司（Oracle）收购昇阳微系统公司，MySQL成为Oracle旗下产品.由于性能高、成本低、可靠性好，已经成为最流行的开源数据库，因此被广泛地应用在Internet上的中小型网站中。随着MySQL的不断成熟，它也逐渐用于更多大规模网站和应用，比如维基百科、Google和Facebook等网站</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性:"></a>特性:</h2><ul>
+<li>使用C和C++编写，并使用了多种编译器进行测试，保证源代码的可移植性。</li>
+<li>支持AIX、BSDi、FreeBSD、HP-UX、Linux、Mac OS、Novell NetWare、NetBSD、OpenBSD、OS/2 Wrap、Solaris、Windows等多种操作系统。</li>
+<li>为多种編程语言提供了API。这些編程语言包括C、C++、C#、VB.NET、Delphi、Eiffel、Java、Perl、PHP、Python、Ruby和Tcl等。</li>
+<li>支持多线程，充分利用CPU资源，支持多用户。</li>
+<li>优化的SQL查询算法，有效地提高查询速度。</li>
+<li>既能够作为一个单独的应用程序在客户端服务器网络环境中运行，也能够作为一个程序库而嵌入到其他的软件中。</li>
+<li>提供多语言支持，常见的编码如中文的GB 2312、BIG5，日文的Shift JIS等都可以用作數據表名和數據列名。</li>
+<li>提供TCP/IP、ODBC和JDBC等多种数据库连接途径。</li>
+<li>提供用于管理、检查、優化数据库操作的管理工具。</li>
+<li>可以处理拥有上千万条记录的大型数据库。</li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
         lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script></div>]]></content>
+        }</script>]]></content>
       
         
         <tags>
@@ -90,35 +463,51 @@
       <url>/2017/10/21/vim/</url>
       <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
 <p><a href="http://www.vim.org/" target="_blank" rel="external">官方主页</a><br>中文使用手册 <a href="https://sourceforge.net/projects/vimcdoc/files/pdf-manual/user_manual-2.1.0.pdf/download" target="_blank" rel="external">PDF</a> 下载</p>
-<p><a href="https://en.wikipedia.org/wiki/Vim" target="_blank" rel="external">Vim</a>——编辑器之神<br><a href="https://en.wikipedia.org/wiki/Emacs" target="_blank" rel="external">Emacs</a>——神的编辑器<br><a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E6%88%98" target="_blank" rel="external">编辑器之战</a>是指计算机编程领域内，两类文本编辑器vi（以及派生版本）<br>和Emacs用户之间的对抗冲突。这已经成为黑客文化和自由软件社区文化的一部分。</p>
-<p>Vim学习曲线：<br>    Vim有着一个比较陡峭的学习曲线<br>    开始学习进展缓慢<br>    掌握基本操作后，大幅度提高编辑效率<br>    shell下键入vimtutor可进入基本教学指导</p>
-<p>不足之处：<br>    大文件读取速度很慢（可在vim.org下载并安装名为<a href="http://www.vim.org/scripts/script.php?script_id=1506" target="_blank" rel="external">LargeFile</a>的Script来优化）<br>    即使文件不大，如果有非常长的行的话，处理也会变慢（同上）<br>    vim自己的脚本语言处理速度不快，若是安插过多脚本包，引导速度会变慢<br>    存在类似Ctrl-1等不能被映射的键（限于某些字符终端的性能）</p>
+<p><a href="https://en.wikipedia.org/wiki/Vim" target="_blank" rel="external">Vim</a>——<strong> 编辑器之神 </strong><br><a href="https://en.wikipedia.org/wiki/Emacs" target="_blank" rel="external">Emacs</a>——<strong> 神的编辑器 </strong><br><a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E6%88%98" target="_blank" rel="external">编辑器之战</a> 是指计算机编程领域内，两类文本编辑器vi（以及派生版本）<br>和Emacs用户之间的对抗冲突。这已经成为黑客文化和自由软件社区文化的一部分。</p>
+<p><em>Vim学习曲线：</em></p>
+<ul>
+<li>Vim有着一个比较陡峭的学习曲线</li>
+<li>开始学习进展缓慢</li>
+<li>掌握基本操作后，大幅度提高编辑效率</li>
+<li>shell下键入vimtutor可进入基本教学指导</li>
+</ul>
+<p><em>不足之处：</em></p>
+<ul>
+<li>大文件读取速度很慢（可在vim.org下载并安装名为<a href="http://www.vim.org/scripts/script.php?script_id=1506" target="_blank" rel="external">LargeFile</a>的Script来优化）</li>
+<li>即使文件不大，如果有非常长的行的话，处理也会变慢（同上）</li>
+<li>vim自己的脚本语言处理速度不快，若是安插过多脚本包，引导速度会变慢</li>
+<li>存在类似Ctrl-1等不能被映射的键（限于某些字符终端的性能）</li>
+</ul>
 <p>Vim具有6种基本模式和5种派生模式</p>
-<h1 id="Vim基础"><a href="#Vim基础" class="headerlink" title="Vim基础"></a>Vim基础</h1><h2 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h2><h3 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h3><h4 id="普通模式-1"><a href="#普通模式-1" class="headerlink" title="普通模式"></a>普通模式</h4><pre><code>vim启动默认模式. 与大多数编辑器相反. 
-有多个方法进入插入模式(insert)，a(append追加)  i(insert插入)
-</code></pre><h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h4><pre><code>向文本缓冲插入文本，按ESC回到普通模式
-</code></pre><h4 id="可视模式"><a href="#可视模式" class="headerlink" title="可视模式"></a>可视模式</h4><pre><code>与普通模式比较相似. 但是移动命令会扩大高亮的文本区域. 高亮区域可以是字符、行
-或者是一块文本. 当执行一个非移动命令时，命令会被执行到这块高亮的区域上. 
-Vim的&quot;文本对象&quot;也能和移动命令一样用在这个模式中
-</code></pre><h4 id="选择模式"><a href="#选择模式" class="headerlink" title="选择模式"></a>选择模式</h4><pre><code>这个模式和无模式编辑器的行为比较相似（Windows标准文本控件的方式）
-这个模式中，可以用鼠标或者光标键高亮选择文本，不过输入任何字符的话，
-Vim会用这个字符替换选择的高亮文本块，并且自动进入插入模式
-</code></pre><h4 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h4><pre><code>在命令行模式中可以输入会被解释成并执行的文本。例如执行命令（&quot;:&quot;键）
-搜索（&quot;/&quot;和&quot;?&quot;键）或者过滤命令（&quot;!&quot;键）
-在命令执行之后，Vim返回到命令行模式之前的模式，通常是普通模式
-</code></pre><h4 id="Ex模式"><a href="#Ex模式" class="headerlink" title="Ex模式"></a>Ex模式</h4><pre><code>和命令行模式比较相似，在使用&quot;:visual&quot;命令离开Ex模式前，可以一次执行多条命令
-</code></pre><h3 id="派生模式"><a href="#派生模式" class="headerlink" title="派生模式"></a>派生模式</h3><h4 id="操作符等待模式"><a href="#操作符等待模式" class="headerlink" title="操作符等待模式"></a>操作符等待模式</h4><pre><code>派生模式指普通模式中，执行一个操作命令后Vim等待一个&quot;动作&quot;来完成这个命令。
-Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动作，
-包括&quot;aw&quot;一个单词（a word）、&quot;as&quot;一个句子（a sentence）、&quot;ap&quot;一个段落（a paragraph）等
-</code></pre><h4 id="插入普通模式"><a href="#插入普通模式" class="headerlink" title="插入普通模式"></a>插入普通模式</h4><pre><code>在插入模式下按下ctrl-o键的时候进入。这个时候暂时进入普通模式，
-执行完一个命令之后，Vim返回插入模式
-</code></pre><h4 id="插入可视模式"><a href="#插入可视模式" class="headerlink" title="插入可视模式"></a>插入可视模式</h4><pre><code>这个模式是在插入模式下按下ctrl-o键并且开始一个可视选择的时候开始。
-在可视区域选择取消的时候，Vim返回插入模式。
-</code></pre><h4 id="插入选择模式"><a href="#插入选择模式" class="headerlink" title="插入选择模式"></a>插入选择模式</h4><pre><code>通常这个模式由插入模式下鼠标拖拽或者shift方向键来进入。
-当选择区域取消的时候，Vim返回插入模式。
-</code></pre><h3 id="替换模式"><a href="#替换模式" class="headerlink" title="替换模式"></a>替换模式</h3><pre><code>这是一个特殊的插入模式，在这个模式中可以做和插入模式一样的操作，
-但是每个输入的字符都会覆盖文本缓冲中已经存在的字符。在普通模式下按&quot;R&quot;键进入。
-</code></pre><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">h,j,k,l ：h表示往左，j表示往下，k表示往右，l表示往上</div><div class="line">以上四个命令均可配合数字使用，比如20j就是向下移动20行</div><div class="line">Ctrl+F：上一页</div><div class="line">Ctrl+B：下一页</div><div class="line">w, e, W, E：跳到单词的后面，小写包括标点</div><div class="line">b, B：以单词为单位往前跳动光标，小写包含标点</div><div class="line">^：一行的开始，等同于home</div><div class="line">$：一行的结尾，等同于end</div><div class="line">G：文件最后一行</div><div class="line">gg：文件第一行</div><div class="line">:n：跳到n行</div><div class="line">Ctrl + E：向下滚动一行</div><div class="line">Ctrl + Y：向上滚动一行</div><div class="line">Ctrl + D：向下滚动半屏</div><div class="line">Ctrl + U：向上滚动半屏</div><div class="line">Ctrl + F：向下滚动一屏</div><div class="line">Ctrl + B：向上滚动一屏</div><div class="line">( ：移动到当前句子的开头</div><div class="line">) ：移动到当前句子的末尾 </div><div class="line">&#123;： 移到当前段落的开头</div><div class="line">&#125; ：移动当前段落的末尾</div></pre></td></tr></table></figure>
+<h1 id="Vim基础"><a href="#Vim基础" class="headerlink" title="Vim基础"></a><em>Vim基础</em></h1><h2 id="几种常见模式"><a href="#几种常见模式" class="headerlink" title="几种常见模式"></a>几种常见模式</h2><h3 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h3><h4 id="普通模式-1"><a href="#普通模式-1" class="headerlink" title="普通模式"></a>普通模式</h4><ul>
+<li>vim启动默认模式. 与大多数编辑器相反. </li>
+<li>有多个方法进入插入模式(insert)，<code>a</code>(append追加)  <code>i</code> (insert插入)<h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h4></li>
+<li>向文本缓冲插入文本，按ESC回到普通模式<h4 id="可视模式"><a href="#可视模式" class="headerlink" title="可视模式"></a>可视模式</h4></li>
+<li>与普通模式比较相似. 但是移动命令会扩大高亮的文本区域. 高亮区域可以是字符、行</li>
+<li>或者是一块文本. 当执行一个非移动命令时，命令会被执行到这块高亮的区域上. </li>
+<li>Vim的”文本对象”也能和移动命令一样用在这个模式中<h4 id="选择模式"><a href="#选择模式" class="headerlink" title="选择模式"></a>选择模式</h4></li>
+<li>这个模式和无模式编辑器的行为比较相似（Windows标准文本控件的方式）</li>
+<li>这个模式中，可以用鼠标或者光标键高亮选择文本，不过输入任何字符的话，</li>
+<li>Vim会用这个字符替换选择的高亮文本块，并且自动进入插入模式<h4 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h4></li>
+<li>在命令行模式中可以输入会被解释成并执行的文本。例如执行命令（”:”键）</li>
+<li>搜索（”/“和”?”键）或者过滤命令（”!”键）</li>
+<li>在命令执行之后，Vim返回到命令行模式之前的模式，通常是普通模式<h4 id="Ex模式"><a href="#Ex模式" class="headerlink" title="Ex模式"></a>Ex模式</h4></li>
+<li>和命令行模式比较相似，在使用”:visual”命令离开Ex模式前，可以一次执行多条命令</li>
+</ul>
+<h3 id="派生模式"><a href="#派生模式" class="headerlink" title="派生模式"></a>派生模式</h3><h4 id="操作符等待模式"><a href="#操作符等待模式" class="headerlink" title="操作符等待模式"></a>操作符等待模式</h4><ul>
+<li>派生模式指普通模式中，执行一个操作命令后Vim等待一个”动作”来完成这个命令。</li>
+<li>Vim也支持在操作符等待模式中使用”文本对象”作为动作，</li>
+<li>包括”aw”一个单词（a word）、”as”一个句子（a sentence）、”ap”一个段落（a paragraph）等<h4 id="插入普通模式"><a href="#插入普通模式" class="headerlink" title="插入普通模式"></a>插入普通模式</h4></li>
+<li>在插入模式下按下ctrl-o键的时候进入。这个时候暂时进入普通模式，</li>
+<li>执行完一个命令之后，Vim返回插入模式<h4 id="插入可视模式"><a href="#插入可视模式" class="headerlink" title="插入可视模式"></a>插入可视模式</h4></li>
+<li>这个模式是在插入模式下按下ctrl-o键并且开始一个可视选择的时候开始。</li>
+<li>在可视区域选择取消的时候，Vim返回插入模式。<h4 id="插入选择模式"><a href="#插入选择模式" class="headerlink" title="插入选择模式"></a>插入选择模式</h4></li>
+<li>通常这个模式由插入模式下鼠标拖拽或者shift方向键来进入。</li>
+<li>当选择区域取消的时候，Vim返回插入模式。<h3 id="替换模式"><a href="#替换模式" class="headerlink" title="替换模式"></a>替换模式</h3></li>
+<li>这是一个特殊的插入模式，在这个模式中可以做和插入模式一样的操作，</li>
+<li>但是每个输入的字符都会覆盖文本缓冲中已经存在的字符。在普通模式下按”R”键进入。</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">h,j,k,l ：h表示往左，j表示往下，k表示往右，l表示往上</div><div class="line">以上四个命令均可配合数字使用，比如20j就是向下移动20行</div><div class="line">Ctrl+F：上一页</div><div class="line">Ctrl+B：下一页</div><div class="line">w, e, W, E：跳到单词的后面，小写包括标点</div><div class="line">b, B：以单词为单位往前跳动光标，小写包含标点</div><div class="line">^：一行的开始，等同于home</div><div class="line">$：一行的结尾，等同于end</div><div class="line">G：文件最后一行</div><div class="line">gg：文件第一行</div><div class="line">:n：跳到n行</div><div class="line">Ctrl + E：向下滚动一行</div><div class="line">Ctrl + Y：向上滚动一行</div><div class="line">Ctrl + D：向下滚动半屏</div><div class="line">Ctrl + U：向上滚动半屏</div><div class="line">Ctrl + F：向下滚动一屏</div><div class="line">Ctrl + B：向上滚动一屏</div><div class="line">( ：移动到当前句子的开头</div><div class="line">) ：移动到当前句子的末尾 </div><div class="line">&#123;： 移到当前段落的开头</div><div class="line">&#125; ：移动当前段落的末尾</div></pre></td></tr></table></figure>
 <h3 id="插入模式-1"><a href="#插入模式-1" class="headerlink" title="插入模式"></a>插入模式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">i：插入到光标前</div><div class="line">I：插入到行开始</div><div class="line">a：插入到光标后</div><div class="line">A：插入到行最后位置</div><div class="line">o：当前光标所在行下行插入新行</div><div class="line">O：当前光标所在行上行插入新行</div><div class="line">Esc：关闭插入模式</div></pre></td></tr></table></figure>
 <h3 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">r：插入模式下替换光标所在字符</div><div class="line">J：合并下一行到上一行</div><div class="line">s：删除光标所在的一个字符, 光标还在当行</div><div class="line">S：删除光标所在的一行，光标还在当行，然后进入插入模式，不同于dd</div><div class="line">dd：删除光标所在行，光标到下一行，不进入插入模式</div><div class="line">u：撤销上一步操作，等同于x界面Ctrl + Z</div><div class="line">U：撤销对整行的操作</div><div class="line">Ctrl+R：恢复上一步操作</div><div class="line">.：重复上个命令</div><div class="line">[N] &gt;&gt;：一行或N行往右移动一个tab</div><div class="line">[N] &lt;&lt;：一行或N行往左移动一个tab</div><div class="line">Ctrl+P：自动补全</div></pre></td></tr></table></figure>
 <h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">:w：保存</div><div class="line">:wq, :x：保存并关闭</div><div class="line">:q：已保存</div><div class="line">:q：强制退出不保存</div><div class="line">ZZ：保存并退出</div><div class="line">:e!：放弃所有修改，并打开原来文件</div></pre></td></tr></table></figure>
@@ -130,7 +519,7 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
 <h3 id="执行shell命令"><a href="#执行shell命令" class="headerlink" title="执行shell命令"></a>执行shell命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:!<span class="built_in">command</span>：命令</div><div class="line">:!ls：列出当前目录下文件</div></pre></td></tr></table></figure>
 <h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">:<span class="built_in">set</span> all 查看 vi 或 Vim 中设置的所有选项的当前值</div><div class="line">:<span class="built_in">set</span> &lt;option&gt;? 查看特定选项 &lt;option&gt; 的当前值</div><div class="line">:<span class="built_in">set</span> number 显示行号（简写:<span class="built_in">set</span> nu ）</div><div class="line">:<span class="built_in">set</span> no number 取消行号显示（简写:<span class="built_in">set</span> no nu）</div><div class="line">:<span class="built_in">set</span> autoindent 设置自动缩进 （简写:<span class="built_in">set</span> ai）</div><div class="line">:<span class="built_in">set</span> no autoindent 取消自动缩进设置（简写:<span class="built_in">set</span> no ai）</div><div class="line">:<span class="built_in">set</span> shiftwidth=4 设置缩进宽度为 4（简写	:<span class="built_in">set</span> sw=4）</div><div class="line">:<span class="built_in">set</span> ignorecase：忽略大小写的查找（简写:<span class="built_in">set</span> ic）</div><div class="line">:<span class="built_in">set</span> noignorecase：不忽略大小写的查找（简写:<span class="built_in">set</span> no ic）</div><div class="line">:<span class="built_in">set</span> hlsearch：高亮搜索结果，所有结果都高亮显示，而不是只显示一个匹配</div><div class="line">:<span class="built_in">set</span> nohlsearch：关闭高亮搜索显示</div><div class="line">:nohlsearch：关闭当前的高亮显示，如果再次搜索或者按下n或N键，则会再次高亮</div><div class="line">:<span class="built_in">set</span> incsearch：逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成</div><div class="line">:<span class="built_in">set</span> wrapscan：重新搜索，在搜索到文件头或尾时，返回继续搜索，默认开启</div><div class="line">:<span class="built_in">set</span> list 显示不可见字符 </div><div class="line">:<span class="built_in">set</span> nolist 取消显示不可见字符设置</div></pre></td></tr></table></figure>
 <h2 id="vim快捷键键位图"><a href="#vim快捷键键位图" class="headerlink" title="vim快捷键键位图"></a>vim快捷键键位图</h2><p><a href="http://www.runoob.com/w3cnote/all-vim-cheatsheat.html" target="_blank" rel="external">来源</a></p>
-<h1 id="Vim进阶"><a href="#Vim进阶" class="headerlink" title="Vim进阶"></a>Vim进阶</h1></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<h1 id="Vim进阶"><a href="#Vim进阶" class="headerlink" title="Vim进阶"></a><em>Vim进阶</em></h1></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -175,10 +564,20 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
       <title><![CDATA[机器学习]]></title>
       <url>/2017/10/19/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
-<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</div><div class="line">监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</div><div class="line">训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</div></pre></td></tr></table></figure>
-<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</div></pre></td></tr></table></figure>
-<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">介于监督学习与无监督学习之间</div></pre></td></tr></table></figure>
-<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</div></pre></td></tr></table></figure>
+<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><ul>
+<li>从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</li>
+<li>监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</li>
+<li>训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</li>
+</ul>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><ul>
+<li>与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</li>
+</ul>
+<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><ul>
+<li>介于监督学习与无监督学习之间</li>
+</ul>
+<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><ul>
+<li>通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</li>
+</ul>
 <h1 id="机器学习知识储备"><a href="#机器学习知识储备" class="headerlink" title="机器学习知识储备"></a>机器学习知识储备</h1><p>从数学层面推导最经典的机器学习算法，以及每种算法的示例和代码实现（Python）、如何做算法的参数调试、以实际应用案例分析各种算法的选择等。</p>
 <h2 id="机器学习的数学基础1-数学分析"><a href="#机器学习的数学基础1-数学分析" class="headerlink" title="机器学习的数学基础1 - 数学分析"></a>机器学习的数学基础1 - 数学分析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">机器学习的一般方法和横向比较</div><div class="line">数学是有用的：以SVD为例</div><div class="line">机器学习的角度看数学</div><div class="line">复习数学分析</div><div class="line">直观解释常数e</div><div class="line">导数/梯度</div><div class="line">随机梯度下降</div><div class="line">Taylor展式的落地应用</div><div class="line">gini系数</div><div class="line">凸函数</div><div class="line">Jensen不等式</div><div class="line">组合数与信息熵的关系</div></pre></td></tr></table></figure>
 <h2 id="机器学习的数学基础2-概率论与贝叶斯先验"><a href="#机器学习的数学基础2-概率论与贝叶斯先验" class="headerlink" title="机器学习的数学基础2 - 概率论与贝叶斯先验"></a>机器学习的数学基础2 - 概率论与贝叶斯先验</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">概率论基础</div><div class="line">古典概型</div><div class="line">贝叶斯公式</div><div class="line">先验分布/后验分布/共轭分布</div><div class="line">常见概率分布</div><div class="line">泊松分布和指数分布的物理意义</div><div class="line">协方差(矩阵)和相关系数</div><div class="line">独立和不相关</div><div class="line">大数定律和中心极限定理的实践意义</div><div class="line">深刻理解最大似然估计MLE和最大后验估计MAP</div><div class="line">过拟合的数学原理与解决方案</div></pre></td></tr></table></figure>
@@ -268,6 +667,7 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
 <h3 id="dpkg包管理"><a href="#dpkg包管理" class="headerlink" title="dpkg包管理"></a>dpkg包管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">dpkg --audit | C（搜索未完成安装的软件包）</div><div class="line">dpkg -l（查询系统已经安装deb包信息）</div><div class="line">dpkg -s（查询指定软件包详细信息）</div><div class="line">dpkg -L（查询系统已经安装软件包所安装的文件）</div><div class="line">dpkg -S（查询系统某文件属于哪个软件包）</div><div class="line">dpkg -c（查询deb包文件所包含的文件） </div><div class="line">dpkg -i（安装deb软件包）</div><div class="line">dpkg -r（不完全卸载软件包，但保留配置信息）</div><div class="line">dpkg -P（完全卸载软件包，同时删除配置信息）</div></pre></td></tr></table></figure>
 <h3 id="Debian高级包管理工具"><a href="#Debian高级包管理工具" class="headerlink" title="Debian高级包管理工具"></a>Debian高级包管理工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tasksel（安装系统过程调用执行的工具，可用来选择需要安装或卸载的软件组件）</div><div class="line">dselect（难度高的deb管理工具）</div><div class="line">aptitude（操作简单，安装与解决依赖库问题）</div><div class="line">synaptic（新立德，apt图形包管理工具）</div></pre></td></tr></table></figure>
 <h2 id="不能运行命令"><a href="#不能运行命令" class="headerlink" title="不能运行命令"></a>不能运行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf / （删除根分区全部的文件）</div><div class="line">sudo rm -rf . （删除当前目录下的所有文件）</div><div class="line">sudo rm -rf * （同上）</div><div class="line">rm -rf * or rm -rf *.* （同上）</div><div class="line">rm -rf ~ / &amp; （删除根分区和home目录，即使你不是root，home目录还是不能幸免）</div><div class="line">sudo mkfs.xxxx（擦除硬盘分区，xxxx 可以是 vfat、ext2、ext3、bfs）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/zero of=/dev/sda （全部硬盘清零）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/sda of=/dev/sdb （用第一块硬盘的内容覆盖第二块的内容）</div><div class="line">sudo dd <span class="keyword">if</span>=something of=/dev/sda （往硬盘上写垃圾数据）</div><div class="line">any_command &gt; /dev/sda （用随意的数据破坏硬盘）</div><div class="line">:()&#123;:|:&amp;&#125;;:（fork炸弹）</div><div class="line">fork <span class="keyword">while</span> fork（同上）</div><div class="line">python -c <span class="string">'import os; os.system("".join([chr(ord(i)-1) for i in "sn!.sg! "]))'</span>（python版本的 rm -rf *）</div></pre></td></tr></table></figure>
+<p><a href="/images/Linux.png">png</a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -304,12 +704,12 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
 <p>More info: <a href="https://en.wikipedia.org/wiki/Hello_world_program" target="_blank" rel="external">Writing</a></p>
 <h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="Quote"><a href="#Quote" class="headerlink" title="Quote"></a>Quote</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
 <footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-<h3 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h3><div id="echarts2730" style="width: 95%;height: 500px;margin: 0 auto"></div>
+<h3 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h3><div id="echarts347" style="width: 95%;height: 500px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts2730'));
+        var myChart = echarts.init(document.getElementById('echarts347'));
         // 指定图表的配置项和数据
         var option = {
     backgroundColor: '#001933',
@@ -386,12 +786,12 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
         myChart.setOption(option);
 </script>
 <p><br></p>
-<div id="echarts9085" style="width: 90%;height: 500px;margin: 0 auto"></div>
+<div id="echarts3730" style="width: 90%;height: 500px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9085'));
+        var myChart = echarts.init(document.getElementById('echarts3730'));
         // 指定图表的配置项和数据
         var option = option = {
     backgroundColor: '#FFFFFFF',
@@ -688,12 +1088,12 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 </script>
-<p><br><br><div id="echarts7977" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<p><br><br><div id="echarts8441" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts7977'));
+        var myChart = echarts.init(document.getElementById('echarts8441'));
         // 指定图表的配置项和数据
         var option = option = {
     backgroundColor: '#FFFFFFF',
@@ -770,12 +1170,12 @@ Vim也支持在操作符等待模式中使用&quot;文本对象&quot;作为动�
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 </script></p>
-<p><br><br><div id="echarts3137" style="width: 110%;height: 400px;margin: 0 auto"></div>
+<p><br><br><div id="echarts9" style="width: 110%;height: 400px;margin: 0 auto"></div>
 <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3137'));
+        var myChart = echarts.init(document.getElementById('echarts9'));
         // 指定图表的配置项和数据
         var option = option = {
     backgroundColor: '#FFFFFFF',

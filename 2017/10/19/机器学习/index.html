@@ -46,7 +46,7 @@
 <meta property="og:url" content="http://127.0.0.1/2017/10/19/机器学习/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-19T10:15:22.092Z">
+<meta property="og:updated_time" content="2017-10-24T09:08:13.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习">
 
@@ -209,10 +209,20 @@
 
       
         <span itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
-<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</div><div class="line">监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</div><div class="line">训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</div></pre></td></tr></table></figure>
-<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</div></pre></td></tr></table></figure>
-<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">介于监督学习与无监督学习之间</div></pre></td></tr></table></figure>
-<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</div></pre></td></tr></table></figure>
+<h1 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><ul>
+<li>从给定的训练数据集中学习出一个函数，当新的数据到来时，可以根据这个函数预测结果。</li>
+<li>监督学习的训练集要求是包括输入和输出，也可以说是特征和目标。</li>
+<li>训练集中的目标是由人标注的。常见的监督学习算法包括回归分析和统计分类</li>
+</ul>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><ul>
+<li>与监督学习相比，训练集没有人为标注的结果。常见的无监督学习算法有聚类</li>
+</ul>
+<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><ul>
+<li>介于监督学习与无监督学习之间</li>
+</ul>
+<h2 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h2><ul>
+<li>通过观察来学习做成如何的动作。每个动作都会对环境有所影响，学习对象根据观察到的周围环境的反馈来做出判断</li>
+</ul>
 <h1 id="机器学习知识储备"><a href="#机器学习知识储备" class="headerlink" title="机器学习知识储备"></a>机器学习知识储备</h1><p>从数学层面推导最经典的机器学习算法，以及每种算法的示例和代码实现（Python）、如何做算法的参数调试、以实际应用案例分析各种算法的选择等。</p>
 <h2 id="机器学习的数学基础1-数学分析"><a href="#机器学习的数学基础1-数学分析" class="headerlink" title="机器学习的数学基础1 - 数学分析"></a>机器学习的数学基础1 - 数学分析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">机器学习的一般方法和横向比较</div><div class="line">数学是有用的：以SVD为例</div><div class="line">机器学习的角度看数学</div><div class="line">复习数学分析</div><div class="line">直观解释常数e</div><div class="line">导数/梯度</div><div class="line">随机梯度下降</div><div class="line">Taylor展式的落地应用</div><div class="line">gini系数</div><div class="line">凸函数</div><div class="line">Jensen不等式</div><div class="line">组合数与信息熵的关系</div></pre></td></tr></table></figure>
 <h2 id="机器学习的数学基础2-概率论与贝叶斯先验"><a href="#机器学习的数学基础2-概率论与贝叶斯先验" class="headerlink" title="机器学习的数学基础2 - 概率论与贝叶斯先验"></a>机器学习的数学基础2 - 概率论与贝叶斯先验</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">概率论基础</div><div class="line">古典概型</div><div class="line">贝叶斯公式</div><div class="line">先验分布/后验分布/共轭分布</div><div class="line">常见概率分布</div><div class="line">泊松分布和指数分布的物理意义</div><div class="line">协方差(矩阵)和相关系数</div><div class="line">独立和不相关</div><div class="line">大数定律和中心极限定理的实践意义</div><div class="line">深刻理解最大似然估计MLE和最大后验估计MAP</div><div class="line">过拟合的数学原理与解决方案</div></pre></td></tr></table></figure>
@@ -336,7 +346,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

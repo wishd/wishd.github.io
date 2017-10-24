@@ -46,7 +46,7 @@
 <meta property="og:url" content="http://127.0.0.1/2017/10/19/debian-1/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-19T09:38:45.680Z">
+<meta property="og:updated_time" content="2017-10-24T10:09:59.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Debian Linux">
 
@@ -247,6 +247,7 @@
 <h3 id="dpkg包管理"><a href="#dpkg包管理" class="headerlink" title="dpkg包管理"></a>dpkg包管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">dpkg --audit | C（搜索未完成安装的软件包）</div><div class="line">dpkg -l（查询系统已经安装deb包信息）</div><div class="line">dpkg -s（查询指定软件包详细信息）</div><div class="line">dpkg -L（查询系统已经安装软件包所安装的文件）</div><div class="line">dpkg -S（查询系统某文件属于哪个软件包）</div><div class="line">dpkg -c（查询deb包文件所包含的文件） </div><div class="line">dpkg -i（安装deb软件包）</div><div class="line">dpkg -r（不完全卸载软件包，但保留配置信息）</div><div class="line">dpkg -P（完全卸载软件包，同时删除配置信息）</div></pre></td></tr></table></figure>
 <h3 id="Debian高级包管理工具"><a href="#Debian高级包管理工具" class="headerlink" title="Debian高级包管理工具"></a>Debian高级包管理工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tasksel（安装系统过程调用执行的工具，可用来选择需要安装或卸载的软件组件）</div><div class="line">dselect（难度高的deb管理工具）</div><div class="line">aptitude（操作简单，安装与解决依赖库问题）</div><div class="line">synaptic（新立德，apt图形包管理工具）</div></pre></td></tr></table></figure>
 <h2 id="不能运行命令"><a href="#不能运行命令" class="headerlink" title="不能运行命令"></a>不能运行命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf / （删除根分区全部的文件）</div><div class="line">sudo rm -rf . （删除当前目录下的所有文件）</div><div class="line">sudo rm -rf * （同上）</div><div class="line">rm -rf * or rm -rf *.* （同上）</div><div class="line">rm -rf ~ / &amp; （删除根分区和home目录，即使你不是root，home目录还是不能幸免）</div><div class="line">sudo mkfs.xxxx（擦除硬盘分区，xxxx 可以是 vfat、ext2、ext3、bfs）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/zero of=/dev/sda （全部硬盘清零）</div><div class="line">sudo dd <span class="keyword">if</span>=/dev/sda of=/dev/sdb （用第一块硬盘的内容覆盖第二块的内容）</div><div class="line">sudo dd <span class="keyword">if</span>=something of=/dev/sda （往硬盘上写垃圾数据）</div><div class="line">any_command &gt; /dev/sda （用随意的数据破坏硬盘）</div><div class="line">:()&#123;:|:&amp;&#125;;:（fork炸弹）</div><div class="line">fork <span class="keyword">while</span> fork（同上）</div><div class="line">python -c <span class="string">'import os; os.system("".join([chr(ord(i)-1) for i in "sn!.sg! "]))'</span>（python版本的 rm -rf *）</div></pre></td></tr></table></figure>
+<p><a href="/images/Linux.png">png</a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -339,7 +340,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
