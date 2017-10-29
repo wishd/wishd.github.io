@@ -1,0 +1,668 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="记载杂事" />
+
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令大全">
+<meta property="og:url" content="http://127.0.0.1/2017/10/24/linux-command/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-29T07:29:27.328Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux命令大全">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> Linux命令大全 | blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Just for fun</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+      
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Linux命令大全
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2017-10-24T18:41:00+08:00" content="2017-10-24">
+            2017-10-24
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <hr="">
+<h1 id="登录、退出、关机和重启"><a href="#登录、退出、关机和重启" class="headerlink" title="登录、退出、关机和重启"></a>登录、退出、关机和重启</h1><p>login 用户登录系统<br>logout<br>nologin<br>exit<br>sulogin<br>rlogin<br>poweroff<br>ctrl+alt+del<br>shutdown<br>halt<br>reboot<br>init<br>runlevel<br>telinit</p>
+<h1 id="获取帮助"><a href="#获取帮助" class="headerlink" title="获取帮助"></a>获取帮助</h1><p>help<br>man<br>manpath<br>info<br>pinfo</p>
+<h1 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h1><p>vi<br>nano<br>view<br>ex<br>ed<br>red<br>emacs</p>
+<h1 id="目录和文件操作"><a href="#目录和文件操作" class="headerlink" title="目录和文件操作"></a>目录和文件操作</h1><p>pwd<br>cd<br>ls<br>dir<br>dirs<br>mkdir<br>rmdir<br>cp<br>mv<br>rm<br>install<br>tmpwatch<br>file<br>du<br>wc<br>tree<br>cksum<br>md5sum<br>sum<br>dirname<br>mkfifo<br>mktemp<br>ln<br>sln<br>lndir<br>link<br>unlink<br>basename<br>pathchk<br>symlinks<br>rcp<br>fsview<br>mc</p>
+<h1 id="显示文本文件内容"><a href="#显示文本文件内容" class="headerlink" title="显示文本文件内容"></a>显示文本文件内容</h1><p>cat<br>more<br>less<br>head<br>tail<br>nl<br>tac<br>rev<br>fold<br>fmt<br>expand<br>pr</p>
+<h1 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h1><p>sort<br>uniq<br>cut<br>comn<br>diff<br>join<br>diff3<br>cmp<br>colrm<br>paste<br>tr<br>split<br>csplit<br>tee<br>unexpand<br>patch<br>awk<br>sed<br>od</p>
+<h1 id="字符串、文件和命令查找"><a href="#字符串、文件和命令查找" class="headerlink" title="字符串、文件和命令查找"></a>字符串、文件和命令查找</h1><p>grep<br>egrep<br>fgrep<br>find<br>updatedb<br>locate<br>whereis<br>whatis<br>apropos<br>which<br>look</p>
+<h1 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h1><p>cal<br>date<br>hwclock<br>clock<br>clockdiff<br>zdump<br>rdate<br>sleep</p>
+<h1 id="数字计算"><a href="#数字计算" class="headerlink" title="数字计算"></a>数字计算</h1><p>bc<br>dc<br>expr</p>
+<h1 id="Shell相关命令"><a href="#Shell相关命令" class="headerlink" title="Shell相关命令"></a>Shell相关命令</h1><p>command<br>exec<br>bash<br>builtin<br>enable<br>source<br>mksh<br>suspend<br>sushell<br>shopt<br>rsh<br>ulimit<br>history<br>alias<br>unalias<br>eval<br>fc</p>
+<h1 id="Shell编程"><a href="#Shell编程" class="headerlink" title="Shell编程"></a>Shell编程</h1><p>daclare<br>export<br>set<br>unset<br>env<br>read<br>readonly<br>test<br>false</p>
+<h1 id="程序编译"><a href="#程序编译" class="headerlink" title="程序编译"></a>程序编译</h1><p>gcc<br>gdbserver<br>cmake<br>indent<br>protoize<br>unprotoize<br>gcov<br>find2perl<br>as<br>php<br>perl<br>gdb<br>autoupdate<br>autoheader<br>autoscan<br>autoconf</p>
+<h1 id="用户和组群管理"><a href="#用户和组群管理" class="headerlink" title="用户和组群管理"></a>用户和组群管理</h1><p>useradd<br>adduser<br>lnewusers<br>usermod<br>groupadd<br>groupmod<br>groupdel<br>passwd<br>gpasswd<br>chfn<br>chsh<br>pwck<br>newgrp<br>finger<br>groups<br>id<br>grpck<br>grpconv<br>grpuncov<br>groupmems<br>userinfo<br>userpasswd<br>vigr<br>vipw<br>newusers<br>chpasswd<br>pwconv<br>pwunconv<br>chage<br>su<br>sudo<br>sudoedit<br>sudoreplay</p>
+<h1 id="显示登录用户"><a href="#显示登录用户" class="headerlink" title="显示登录用户"></a>显示登录用户</h1><p>w<br>who<br>whoami<br>logname<br>users<br>last<br>lastb<br>rwho</p>
+<h1 id="文件、目录权限和属性"><a href="#文件、目录权限和属性" class="headerlink" title="文件、目录权限和属性"></a>文件、目录权限和属性</h1><p>chmod<br>chown<br>chgrp<br>umask<br>getfacl<br>setfacl<br>chacl<br>lsattr<br>chattr</p>
+<h1 id="归档和压缩"><a href="#归档和压缩" class="headerlink" title="归档和压缩"></a>归档和压缩</h1><p>tar<br>gzip<br>gunzip<br>zcmp<br>zdiff<br>zforce<br>zip<br>unzip<br>zcat<br>zgrep<br>zipgrep<br>zipinfo<br>zipsplit<br>zless<br>zmore<br>bzip2<br>bunzip2<br>bzcat<br>bzcmp<br>bzdiff<br>bzgrep<br>bzip2recover<br>bzless<br>bzmore<br>compress<br>uncompres<br>znew<br>xz<br>xzcat<br>xzcmp<br>xzdiff<br>xzdec<br>xzgrep<br>xzless<br>xzmore<br>tgz<br>gzexe</p>
+<h1 id="软件包管理"><a href="#软件包管理" class="headerlink" title="软件包管理"></a>软件包管理</h1><p>rpm<br>rpmargs<br>rpmbuild<br>rpmdiff<br>rpmdiff<br>…..</p>
+<h1 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h1><p>fdisk<br>parted<br>cfdisk<br>partx<br>sfdisk<br>delpart<br>partprobe</p>
+<h1 id="文件系统管理"><a href="#文件系统管理" class="headerlink" title="文件系统管理"></a>文件系统管理</h1><p>mkfs<br>mke2fs<br>mkfs.ext4<br>mkdosfs<br>mkfs.vfat<br>mkfs.msdos<br>fdformat<br>mount<br>umount<br>df<br>mountpoint<br>e2label<br>dumpe2fs<br>tune2fs<br>findfs<br>blkid<br>fsck<br>e2image<br>fsadm<br>mkswap<br>swapon<br>swapoff<br>volname</p>
+<h1 id="磁盘配额"><a href="#磁盘配额" class="headerlink" title="磁盘配额"></a>磁盘配额</h1><p>quotacheck<br>edquota<br>quotaon<br>quota<br>repquota<br>quotastats<br>setquota<br>quotaoff<br>warnquota<br>convertquota</p>
+<h1 id="LVM和RAID管理"><a href="#LVM和RAID管理" class="headerlink" title="LVM和RAID管理"></a>LVM和RAID管理</h1><p>pvcreate<br>pvscan<br>pvdisplay<br>vgcreate<br>vgscan<br>vgdisplay<br>vgreduce<br>vgextend<br>lvcreate<br>lvscan<br>lvdisplay<br>lvextend<br>resize2fs<br>lvremove<br>vgchange<br>vgremove<br>pvremove<br>pvchange<br>pvck<br>pvresize<br>pvmove<br>pvs<br>vgcfgbackup<br>vgcfgrestore<br>vgchange<br>vgconvert<br>vgimport<br>vgmerge<br>vgmknodes<br>vgrename<br>vgs<br>vgsplit<br>lvchange<br>lvmconf<br>lvmdiskscan<br>lvmdump<br>lvmetad<br>lvreduce<br>lvrename<br>lvresize<br>lvs<br>madadm</p>
+<h1 id="GRUB"><a href="#GRUB" class="headerlink" title="GRUB"></a>GRUB</h1><p>grub-md5-crypt<br>grub-install<br>grub<br>grub-crypt</p>
+<h1 id="进程和服务管理"><a href="#进程和服务管理" class="headerlink" title="进程和服务管理"></a>进程和服务管理</h1><p>ps<br>top<br>pgrep<br>pidof<br>pstree<br>kill<br>killall<br>pkill<br>timeout<br>skill<br>wait<br>fuser<br>nice<br>renice<br>nohup<br>pmap<br>lsof<br>ntsysv<br>chkconfig<br>service<br>bg<br>jobs<br>initctl</p>
+<h1 id="任务计划"><a href="#任务计划" class="headerlink" title="任务计划"></a>任务计划</h1><p>crontab<br>at<br>atq<br>atrm<br>atrun<br>batch<br>anacron<br>watch</p>
+<h1 id="备份与还原"><a href="#备份与还原" class="headerlink" title="备份与还原"></a>备份与还原</h1><p>mkisofs<br>isosize<br>dump<br>resotre<br>cpio<br>dd<br>wodim<br>cdrecord<br>dvdrecord<br>cdrwtool</p>
+<h1 id="模块和内核管理"><a href="#模块和内核管理" class="headerlink" title="模块和内核管理"></a>模块和内核管理</h1><p>lsmod<br>get_module<br>modinfo<br>insmod<br>modprobe<br>rmmod<br>depmod<br>sysctl<br>kexec<br>slabtop<br>dmesg<br>make</p>
+<h1 id="日志管理"><a href="#日志管理" class="headerlink" title="日志管理"></a>日志管理</h1><p>logwatch<br>logger<br>logsave<br>logresolve</p>
+<h1 id="硬件管理"><a href="#硬件管理" class="headerlink" title="硬件管理"></a>硬件管理</h1><p>lscpu<br>nproc<br>chcpu<br>cpuspeed<br>free<br>lspci<br>setpci<br>lsscsi<br>hdparm<br>ejcet<br>lsusb<br>usb-devices<br>lspcmcia<br>pccardctl<br>setserial<br>lssubsys<br>lpinfo<br>losetup<br>blockdev<br>dmidecode<br>systool<br>mev<br>loadkeys<br>dumpkeys<br>minicom<br>arch<br>sync</p>
+<h1 id="SELinux管理"><a href="#SELinux管理" class="headerlink" title="SELinux管理"></a>SELinux管理</h1><p>sestatus<br>getenforce<br>setenforce<br>getfattr<br>chcon<br>matchpathcon<br>fixfiles<br>restorecon<br>seinfo<br>sesearch<br>getsebool<br>setsebool<br>semodule</p>
+<h1 id="审计系统"><a href="#审计系统" class="headerlink" title="审计系统"></a>审计系统</h1><p>auditctl<br>aureport<br>susearch<br>autrace<br>audit-viewer</p>
+<h1 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h1><p>udevadm info<br>nknod<br>makedev<br>lsblk</p>
+<h1 id="性能监控"><a href="#性能监控" class="headerlink" title="性能监控"></a>性能监控</h1><p>sar<br>iostat<br>iotop<br>mpstat<br>vmstat<br>tload<br>time<br>uptime<br>ipcs<br>ipcrm<br>lslk</p>
+<h1 id="X-Window"><a href="#X-Window" class="headerlink" title="X Window"></a>X Window</h1><p>xhost<br>xinit<br>xlsclients<br>xlsfonts<br>resize<br>startx<br>screen<br>xset<br>xauth</p>
+<h1 id="打印和传真"><a href="#打印和传真" class="headerlink" title="打印和传真"></a>打印和传真</h1><p>lpr<br>lpq<br>lprm<br>lpstat<br>cupsaccept<br>cupsreject<br>cupsenable<br>cupsdisable<br>cancel<br>lp<br>lpadmin<br>efax</p>
+<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>tty<br>consoletype<br>fgconsole<br>mingetty<br>vlock<br>stty<br>tset<br>open<br>reset<br>securetty<br>tput</p>
+<h1 id="密码和证书管理"><a href="#密码和证书管理" class="headerlink" title="密码和证书管理"></a>密码和证书管理</h1><p>pwdhash<br>mkpasswd<br>keytool<br>certutil<br>vncpasswd<br>ssh-keygen<br>htpasswd<br>htdigest<br>ntp-keygen<br>slappasswd<br>rndc-confgen<br>openssl</p>
+<h1 id="Linux系统故障排错"><a href="#Linux系统故障排错" class="headerlink" title="Linux系统故障排错"></a>Linux系统故障排错</h1><p>mkbootdisk<br>chroot<br>badblocks<br>mkinitrd<br>switch_root<br>mkdumprd</p>
+<h1 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h1><p>traceroute<br>mii-tool<br>ifconfig<br>ifdown<br>ifup<br>ping<br>netstat<br>arp<br>rpcinfo<br>ip<br>tracepath<br>ifcfg<br>setup<br>arping<br>ss<br>ipcalc<br>arpwatch<br>arpaname<br>route<br>nntptest<br>rpcbind<br>usernetctl<br>iwconfig</p>
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><p>rtacct<br>nmap<br>tcpdump<br>iptstate<br>nstat<br>iptraf<br>lnstat<br>nc<br>mtr</p>
+<h1 id="网络客户端"><a href="#网络客户端" class="headerlink" title="网络客户端"></a>网络客户端</h1><p>elinks<br>wget<br>axel<br>curl<br>lynx<br>lftp<br>lftpget<br>telnet<br>tftp<br>mutt<br>mailx<br>mail<br>vncviewer<br>smbclient<br>svn<br>ssh<br>scp<br>sftp<br>mount.nfs4<br>mount.nfs<br>dhclient<br>ntpdate</p>
+<h1 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h1><p>mysql_safe<br>mysql_install_db<br>mysqlshow<br>mysqladmin<br>mysql<br>mysqlimport<br>mysqlcheck<br>mysqlbinlog<br>mysqldumpslow<br>mysqldump<br>mysqlhotcopy</p>
+<h1 id="PostgreSQL数据库"><a href="#PostgreSQL数据库" class="headerlink" title="PostgreSQL数据库"></a>PostgreSQL数据库</h1><p>initdb<br>pg_ctl<br>psql<br>createdb<br>dropdb<br>vacuumdb<br>createuser<br>dropuser<br>pg_dumpall<br>pg_restore</p>
+<h1 id="iptables和arptables防火墙"><a href="#iptables和arptables防火墙" class="headerlink" title="iptables和arptables防火墙"></a>iptables和arptables防火墙</h1><p>iptables-save<br>iptables-restore<br>iptables<br>arptables-save<br>arptables-restore<br>arptables</p>
+<h1 id="PPPoE配置"><a href="#PPPoE配置" class="headerlink" title="PPPoE配置"></a>PPPoE配置</h1><p>pppoe-setup<br>pppoe-connect<br>pppoe-start<br>pppoe-stop<br>pppoe-status<br>pppoe-sniff<br>pppoe-server<br>pppoe-relay<br>pppstats</p>
+<h1 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h1><p>ssh-agent<br>ssh-add<br>ssh-keyscan<br>sshd<br>vncserver<br>exportfs<br>showmount<br>nfsstat<br>mountstats<br>nfsiostat<br>testparm<br>smbpasswd<br>smbstatus<br>pdbedit<br>smbtree<br>nmblookup<br>dhcpd<br>dhcrelay<br>rndc<br>named-checkconf<br>named-checkzone<br>named-compilezone<br>host<br>nslookup<br>dig<br>jwhois<br>whois<br>dnsdomainname<br>nsupdate<br>apachectl<br>httpd<br>ab<br>postalias<br>postconf<br>svnserve<br>nisdomainname<br>domainname<br>ypdomainname<br>ypinit<br>yptest<br>ypwhich<br>ypcat<br>ypmatch<br>yppasswd<br>ypchsh<br>ypset<br>yppoll<br>ypxfr<br>ypserv<br>ypbind<br>ntpstat<br>ntpq<br>ntptime<br>ntpdc<br>makemap<br>mailq<br>mailstats<br>fetchmail<br>sendmail<br>zebra<br>squid<br>squidclient<br>slaptest<br>ldapadd<br>ldapsearch<br>slapcat<br>ldapmodify<br>slapindex<br>slapschema<br>slapauth<br>slapadd<br>slapacl<br>slaptest<br>slapd</p>
+<h1 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h1><p>mkfontdir<br>dumpiso<br>iconv<br>hash<br>lsb_relese<br>locale<br>nm<br>rmt<br>lscgroup<br>cgclear<br>uuid<br>uuidd<br>ar<br>arpd<br>automount<br>col<br>diffstat<br>dircolors<br>ldd<br>ldconfig<br>hostid<br>uname<br>hostname<br>echo<br>yes<br>printf<br>mesg<br>wall<br>write<br>clear<br>type<br>bind<br>pjtoppm<br>qrttoppm<br>fiascotopnm<br>《linux命令应用大词典》</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/29/proxy/" rel="prev">Proxy</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/24/常见HTTP-FTP-WebSocket错误代码大全/" rel="next">常见HTTP/FTP/WebSocket错误代码大全</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+    </div>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="wishd" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">wishd</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">记载杂事</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#登录、退出、关机和重启"><span class="nav-number">1.</span> <span class="nav-text">登录、退出、关机和重启</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取帮助"><span class="nav-number">2.</span> <span class="nav-text">获取帮助</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本编辑器"><span class="nav-number">3.</span> <span class="nav-text">文本编辑器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录和文件操作"><span class="nav-number">4.</span> <span class="nav-text">目录和文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#显示文本文件内容"><span class="nav-number">5.</span> <span class="nav-text">显示文本文件内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件处理"><span class="nav-number">6.</span> <span class="nav-text">文件处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串、文件和命令查找"><span class="nav-number">7.</span> <span class="nav-text">字符串、文件和命令查找</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日期和时间"><span class="nav-number">8.</span> <span class="nav-text">日期和时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数字计算"><span class="nav-number">9.</span> <span class="nav-text">数字计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell相关命令"><span class="nav-number">10.</span> <span class="nav-text">Shell相关命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell编程"><span class="nav-number">11.</span> <span class="nav-text">Shell编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序编译"><span class="nav-number">12.</span> <span class="nav-text">程序编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用户和组群管理"><span class="nav-number">13.</span> <span class="nav-text">用户和组群管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#显示登录用户"><span class="nav-number">14.</span> <span class="nav-text">显示登录用户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件、目录权限和属性"><span class="nav-number">15.</span> <span class="nav-text">文件、目录权限和属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归档和压缩"><span class="nav-number">16.</span> <span class="nav-text">归档和压缩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件包管理"><span class="nav-number">17.</span> <span class="nav-text">软件包管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区"><span class="nav-number">18.</span> <span class="nav-text">磁盘分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件系统管理"><span class="nav-number">19.</span> <span class="nav-text">文件系统管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘配额"><span class="nav-number">20.</span> <span class="nav-text">磁盘配额</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LVM和RAID管理"><span class="nav-number">21.</span> <span class="nav-text">LVM和RAID管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GRUB"><span class="nav-number">22.</span> <span class="nav-text">GRUB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程和服务管理"><span class="nav-number">23.</span> <span class="nav-text">进程和服务管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务计划"><span class="nav-number">24.</span> <span class="nav-text">任务计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#备份与还原"><span class="nav-number">25.</span> <span class="nav-text">备份与还原</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模块和内核管理"><span class="nav-number">26.</span> <span class="nav-text">模块和内核管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志管理"><span class="nav-number">27.</span> <span class="nav-text">日志管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#硬件管理"><span class="nav-number">28.</span> <span class="nav-text">硬件管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SELinux管理"><span class="nav-number">29.</span> <span class="nav-text">SELinux管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#审计系统"><span class="nav-number">30.</span> <span class="nav-text">审计系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设备管理"><span class="nav-number">31.</span> <span class="nav-text">设备管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能监控"><span class="nav-number">32.</span> <span class="nav-text">性能监控</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#X-Window"><span class="nav-number">33.</span> <span class="nav-text">X Window</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打印和传真"><span class="nav-number">34.</span> <span class="nav-text">打印和传真</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端"><span class="nav-number">35.</span> <span class="nav-text">终端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码和证书管理"><span class="nav-number">36.</span> <span class="nav-text">密码和证书管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux系统故障排错"><span class="nav-number">37.</span> <span class="nav-text">Linux系统故障排错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络命令"><span class="nav-number">38.</span> <span class="nav-text">网络命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络安全"><span class="nav-number">39.</span> <span class="nav-text">网络安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络客户端"><span class="nav-number">40.</span> <span class="nav-text">网络客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL数据库"><span class="nav-number">41.</span> <span class="nav-text">MySQL数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PostgreSQL数据库"><span class="nav-number">42.</span> <span class="nav-text">PostgreSQL数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iptables和arptables防火墙"><span class="nav-number">43.</span> <span class="nav-text">iptables和arptables防火墙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PPPoE配置"><span class="nav-number">44.</span> <span class="nav-text">PPPoE配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器配置"><span class="nav-number">45.</span> <span class="nav-text">服务器配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他命令"><span class="nav-number">46.</span> <span class="nav-text">其他命令</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2017
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wishd
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
